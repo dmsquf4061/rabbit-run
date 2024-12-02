@@ -1,0 +1,328 @@
+/*스타트 페이지 s*/
+.start_page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.start_page > .section_01 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #edf5ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1.5rem, 2vw, 2rem);
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  align-items: center;
+  transition: 1s;
+  z-index: 1;
+}
+
+.start_page .title {
+  font-size: clamp(5rem, 18vw, 7rem);
+  position: relative;
+  height: clamp(4.2rem, 18vw, 6.2rem);
+  line-height: clamp(4.2rem, 18vw, 6.2rem);
+}
+
+.start_page .title > .logo_img {
+  background: url(./img/stamp.png);
+  background-size: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  position: absolute;
+  right: -3rem;
+  bottom: .2rem;
+}
+
+.start_page .rabbit_img {
+  width: clamp(30rem, 15vw, 40rem);
+  height: clamp(30rem, 15vw, 40rem);
+  background: url(./img/main_motion.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: .5rem 0; 0;
+}
+
+.start_page .txt {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.start_page .txt div {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.start_page button {
+  width: 24rem;
+  height: 5rem;
+  border: none;
+  border-radius: 5rem;
+  background: #709ad6;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: "Noto Sans KR";
+  cursor: pointer;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.start_page > .section_02 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #DDEBFF, #C3DBFF);
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.start_page > .section_02 .transition {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: -100%;
+  object-fit: cover;
+}
+
+.water_img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: height 4s ease-out;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.water_img > .wave01 {
+  width: 18rem;
+  height: 20rem;
+  background: url(./img/wave01.png);
+  background-size: contain;
+  animation: wave01 4s infinite;
+  position: absolute;
+  left: -5rem;
+  bottom: 8%;
+}
+
+.water_img > .wave02 {
+  width: 18rem;
+  height: 20rem;
+  background: url(./img/wave02.png);
+  background-size: contain;
+  animation: wave02 4s infinite;
+  position: absolute;
+  right: -5rem;
+  bottom: 8%;
+}
+
+.water_img > .wave03 {
+  width: 100%;
+  height: 12%;
+  background: url(./img/wave03.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  animation: wave03 4s infinite;
+  position: absolute;
+  bottom: 4%;
+}
+
+.water_img > .wave04 {
+  width: 100%;
+  height: 12%;
+  background: url(./img/wave04.png);
+  background-size: contain;];
+  background-repeat: repeat-x;
+  background-position: bottom;
+  animation: wave04 4s infinite;
+  position: absolute;
+  bottom: -1%;
+}
+
+@keyframes wave01 {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(1rem);
+  }
+  50% {
+    transform: translateX(-1rem);
+  }
+  75% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes wave02 {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1rem);
+  }
+  50% {
+    transform: translateX(1rem);
+  }
+  75% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes wave03 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.2rem);
+  }
+  50% {
+    transform: translateY(-0.2rem);
+  }
+  75% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes wave04 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.2rem);
+  }
+  50% {
+    transform: translateY(0.2rem);
+  }
+  75% {
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*스타트 페이지 e*/
+
+/*메인 페이지 s*/
+.main_page {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #DDEBFF, #C3DBFF);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.underwater_palace_img {
+  width: 100%;
+  height: 100%;
+  background: url(./img/underwater_palace.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  pointer-events: none;
+}
+.wave_left_img {
+  width: 45%;
+  height: 20%;
+  background: url(./img/wave_left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 2%;
+  top: 10%;
+  animation: wave04 4s infinite;
+}
+.wave_right_img {
+  width: 45%;
+  height: 20%;
+  background: url(./img/wave_right.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 2%;
+  top: 30%;
+  animation: wave03 4s infinite;
+}
+.click_btn {
+  position: absolute;
+  transform: translateX(-50%);
+  transform-origin: left bottom;
+  left: 50%;
+  bottom: 29rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  opacity: 0;
+}
+.click_btn .btn { 
+  font-size: 1.6rem;
+  color: #5F88C6;
+}
+.balloon_img {
+  width: 25rem;
+  height: 7.5rem;
+  background: url(./img/balloon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.balloon_img > .txt {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 4.4rem;
+  left: 6rem;
+}
+.terrapin_img {
+  width: 3rem;
+  height: 3rem;
+  background: url(./img/terrapin.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  position: absolute;
+  top: 3.6rem;
+  left: 2rem;
+}
+@keyframes size {
+  0% {     
+    transform: scale(0) translateX(-50%);
+  }    
+  30% {      
+    transform: scale(1) translateX(-50%);  
+  }    
+  50% {      
+    transform: scale(1.1) translateX(-50%);
+  }    
+  100% {     
+    transform: scale(1) translateX(-50%);
+  }
+}
+/*메인 페이지 e*/
