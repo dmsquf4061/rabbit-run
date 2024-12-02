@@ -1,0 +1,23 @@
+@media (max-width: 884px) {
+  body {
+    width: 100%;
+  }
+  .underwater_palace_img {
+  }
+  .click_btn {
+    bottom: clamp(18rem, 60vw, 60rem);
+  }
+}
+
+@media (max-width: 479px) {
+  .underwater_palace_img {
+  }
+  .click_btn {
+    bottom: clamp(18rem, 60vw, 30rem);
+  }
+}
+
+@media (max-width: 300px) {
+  .click_btn {
+  }
+}
