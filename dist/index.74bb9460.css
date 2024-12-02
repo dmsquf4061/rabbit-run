@@ -43,7 +43,7 @@
 }
 
 .start_page .rabbit_img {
-  background: url("main_motion.75453c29.gif") center / contain no-repeat;
+  background: url("serve/css/img/main_motion.gif") center / contain no-repeat;
   width: clamp(30rem, 15vw, 40rem);
   height: clamp(30rem, 15vw, 40rem);
   margin: .5rem 0 0;
