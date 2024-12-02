@@ -1,0 +1,16 @@
+@media (width <= 884px) {
+  body {
+    width: 100%;
+  }
+
+  .click_btn {
+    bottom: clamp(18rem, 60vw, 60rem);
+  }
+}
+
+@media (width <= 479px) {
+  .click_btn {
+    bottom: clamp(18rem, 60vw, 30rem);
+  }
+}
+/*# sourceMappingURL=index.2ca6ad9c.css.map */
