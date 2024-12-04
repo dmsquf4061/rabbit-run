@@ -51,14 +51,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
 
-    <script type="text/javascript" type="module" src="./index.js"></script>
+    <script type="text/javascript" type="module" src="./js/index.js"></script>
+    <script type="text/javascript" type="module" src="./js/game.js"></script>
   </head>
   <body>
     <section class="start_page">
       <div class="section_01">
-        <!-- <div class="water"></div> -->
         <div class="title">
-          토끼런
+          <h1 class="main_txt">토끼런</h1>
           <div class="logo_img"></div>
         </div>
         <div class="txt">
@@ -90,6 +90,18 @@
       </div>
       <div class="underwater_palace_img"></div>
     </main>
-    <!-- <div class="main-content"></div> -->
+    <section class="game_page">
+      <div class="puzzle_area">
+        <h3 class="title">조각 맞추기</h3>
+        <div class="txt">
+          <div>토선생이 자라 등에 업힐 수 있도록</div>
+          <div>조각을 옮겨 그림을 완성해 주시오.</div>
+        </div>
+        <div id="puzzle_game"></div>
+      </div>
+      <div class="complete_popup">
+        <button id="complete_button">완성!</button>
+      </div>
+    </section>
   </body>
 </html>

@@ -16,7 +16,8 @@
     bottom: clamp(18rem, 60vw, 30rem);
   }
 }
-
+@media (max-width: 425px) {
+}
 @media (max-width: 300px) {
   .click_btn {
   }

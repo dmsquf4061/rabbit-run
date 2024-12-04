@@ -16,6 +16,26 @@
 //   }, 3500);
 // });
 $(document).ready(function() {
+    setTimeout(()=>{
+        $(".section_01 > .title").css({
+            opacity: 1
+        });
+        setTimeout(()=>{
+            $(".section_01 > .txt").css({
+                opacity: 1
+            });
+            setTimeout(()=>{
+                $(".section_01 > .rabbit_img").css({
+                    opacity: 1
+                });
+                setTimeout(()=>{
+                    $(".section_01 > .start_btn").css({
+                        opacity: 1
+                    });
+                }, 300); // 버튼이 나타나는 시간 차이
+            }, 300); // 이미지가 나타나는 시간 차이
+        }, 300); // 텍스트가 나타나는 시간 차이
+    }, 100); // 처음 딜레이
     $(".start_btn").on("click", function() {
         $(".section_01").css({
             top: "-100%"
@@ -39,7 +59,7 @@ $(document).ready(function() {
                     setTimeout(()=>{
                         $(".click_btn").css({
                             opacity: "1",
-                            animation: "size 3s ease-in-out"
+                            animation: "size 2s ease-in-out"
                         });
                     }, 0);
                 }, 500);
