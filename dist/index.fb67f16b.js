@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (completed) showcompletePopup();
     }
     function showcompletePopup() {
-        completePopup.addClass(on);
+        completePopup.classList.add("on");
         disablePieces();
     }
     function disablePieces() {

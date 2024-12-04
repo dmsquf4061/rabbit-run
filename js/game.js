@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showcompletePopup() {
-    completePopup.addClass(on);
+    completePopup.classList.add("on");
     disablePieces();
   }
 
