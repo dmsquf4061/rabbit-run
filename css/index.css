@@ -414,7 +414,7 @@
 .puzzle_area > .txt div {
   font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
-.complete_popup {
+#complete_popup {
   position: absolute;
   top: 0;
   left: 0;
@@ -424,7 +424,11 @@
   opacity: 0;
   pointer-events: none;
 }
-#complete_button {
+#complete_popup.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+.complete_button {
   padding: 10px 20px;
   font-size: 18px;
   font-weight: bold;
@@ -436,7 +440,7 @@
   margin-top: 20px;
 }
 
-#complete_button:hover {
+.complete_button:hover {
   background-color: #45a049;
 }
 

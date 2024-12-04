@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded");
     const puzzleArea = document.getElementById("puzzle_game");
-    const completeButton = document.getElementById("complete_button");
+    const completePopup = document.getElementById("complete_popup");
     const gridSize = 3;
     const pieceSize = 100;
     const gridSpacing = 2;
@@ -107,10 +107,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             }
         }
-        if (completed) showCompleteButton();
+        if (completed) showcompletePopup();
     }
-    function showCompleteButton() {
-        completeButton.style.display = "block";
+    function showcompletePopup() {
+        completePopup.addClass(on);
         disablePieces();
     }
     function disablePieces() {
