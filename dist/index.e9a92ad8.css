@@ -383,7 +383,7 @@
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   width: 70%;
-  max-width: 500px;
+  max-width: 27rem;
   display: grid;
   position: absolute;
   top: 30%;
