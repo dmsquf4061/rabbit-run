@@ -10,15 +10,15 @@ document.addEventListener("DOMContentLoaded", function() {
     let startPosition = null;
     // 이미지 경로 배열 (실제 이미지 경로로 대체)
     const imagePaths = [
-        "/css/img/mural_1.png",
-        "/css/img/mural_2.png",
-        "/css/img/mural_3.png",
-        "/css/img/mural_4.png",
-        "/css/img/mural_5.png",
-        "/css/img/mural_6.png",
-        "/css/img/mural_7.png",
-        "/css/img/mural_8.png",
-        "/css/img/mural_9.png"
+        "./css/img/mural_1.png",
+        "./css/img/mural_2.png",
+        "./css/img/mural_3.png",
+        "./css/img/mural_4.png",
+        "./css/img/mural_5.png",
+        "./css/img/mural_6.png",
+        "./css/img/mural_7.png",
+        "./css/img/mural_8.png",
+        "./css/img/mural_9.png"
     ];
     function createPieces() {
         const placedPositions = new Set();
