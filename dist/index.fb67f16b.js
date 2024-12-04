@@ -10,15 +10,15 @@ document.addEventListener("DOMContentLoaded", function() {
     let startPosition = null;
     // 이미지 경로 배열 (실제 이미지 경로로 대체)
     const imagePaths = [
-        "./css/img/mural_1.png",
-        "./css/img/mural_2.png",
-        "./css/img/mural_3.png",
-        "./css/img/mural_4.png",
-        "./css/img/mural_5.png",
-        "./css/img/mural_6.png",
-        "./css/img/mural_7.png",
-        "./css/img/mural_8.png",
-        "./css/img/mural_9.png"
+        "/css/img/mural_1.png",
+        "/css/img/mural_2.png",
+        "/css/img/mural_3.png",
+        "/css/img/mural_4.png",
+        "/css/img/mural_5.png",
+        "/css/img/mural_6.png",
+        "/css/img/mural_7.png",
+        "/css/img/mural_8.png",
+        "/css/img/mural_9.png"
     ];
     function createPieces() {
         const placedPositions = new Set();
@@ -51,7 +51,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     function selectPiece(e) {
+        // 클릭된 요소가 이미지여도 부모 `.puzzle_piece`를 찾도록 수정
         selectedPiece = e.target.closest(".puzzle_piece");
+        if (!selectedPiece) return;
         startPosition = {
             x: parseInt(selectedPiece.style.left),
             y: parseInt(selectedPiece.style.top)
