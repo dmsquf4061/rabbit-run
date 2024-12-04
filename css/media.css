@@ -7,6 +7,8 @@
   .click_btn {
     bottom: clamp(18rem, 60vw, 60rem);
   }
+  #puzzle_game {
+  }
 }
 
 @media (max-width: 479px) {
@@ -20,5 +22,10 @@
 }
 @media (max-width: 300px) {
   .click_btn {
+  }
+}
+@media (max-height: 809px) {
+  .page {
+    width: 90%;
   }
 }
