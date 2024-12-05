@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const placedPositions = new Set();
         const { pieceSize, gridSpacing } = calculatePieceSize();
         for(let i = 0; i < gridSize * gridSize; i++){
-            const piece = document.createElement("div");
+            const piece = document.createElement("button");
             piece.className = "puzzle_piece";
             // 이미지 요소 생성
             const img = document.createElement("img");
@@ -149,8 +149,16 @@ document.addEventListener("DOMContentLoaded", function() {
         if (completed) showCompletePopup();
     }
     // 퍼즐 완성 팝업 표시
+    const pungImg = document.querySelector(".pung_img");
+    const successImg = document.querySelector(".success_img");
     function showCompletePopup() {
         completePopup.classList.add("on");
+        pungImg.classList.add("on");
+        // 일정 시간 후 두 번째 이미지 표시
+        setTimeout(()=>{
+            successImg.classList.add("on");
+        }, 300); // 1초(1000ms) 후 실행
+        // 퍼즐 영역 클래스 추가
         puzzleArea.classList.add("on");
         disablePieces();
     }
@@ -163,7 +171,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         // <div class="txt"> 내용 변경
         const txtDiv = document.querySelector(".puzzle_area .txt");
-        if (txtDiv) txtDiv.innerHTML = "<div class='on'>\uC131\uACF5\uC774\uC624!</div>";
+        if (txtDiv) {
+            txtDiv.classList.add("on");
+            txtDiv.innerHTML = "<div>\uC131\uACF5\uC774\uC624!</div>";
+        }
     }
     createPieces(); // 퍼즐 조각 생성
     // 윈도우 크기 변경 시 퍼즐 크기 재계산

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const { pieceSize, gridSpacing } = calculatePieceSize();
 
     for (let i = 0; i < gridSize * gridSize; i++) {
-      const piece = document.createElement("div");
+      const piece = document.createElement("button");
       piece.className = "puzzle_piece";
 
       // 이미지 요소 생성
@@ -191,9 +191,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // 퍼즐 완성 팝업 표시
+  const pungImg = document.querySelector(".pung_img");
+  const successImg = document.querySelector(".success_img");
+
   function showCompletePopup() {
     completePopup.classList.add("on");
+    pungImg.classList.add("on");
+
+    // 일정 시간 후 두 번째 이미지 표시
+    setTimeout(() => {
+      successImg.classList.add("on");
+    }, 300); // 1초(1000ms) 후 실행
+
+    // 퍼즐 영역 클래스 추가
     puzzleArea.classList.add("on");
+
     disablePieces();
   }
 
@@ -208,7 +220,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // <div class="txt"> 내용 변경
     const txtDiv = document.querySelector(".puzzle_area .txt");
     if (txtDiv) {
-      txtDiv.innerHTML = "<div class='on'>성공이오!</div>";
+      txtDiv.classList.add("on");
+      txtDiv.innerHTML = "<div>성공이오!</div>";
     }
   }
 

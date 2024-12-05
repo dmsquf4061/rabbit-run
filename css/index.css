@@ -280,6 +280,7 @@
   animation: wave03 4s infinite;
 }
 .click_btn {
+  font-family: "ChosunCentennial";
   position: absolute;
   transform: translateX(-50%);
   transform-origin: left bottom;
@@ -349,7 +350,7 @@
   height: 100%;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.56, 0, 0.07, 1.01);
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -388,7 +389,7 @@
   overflow: hidden;
   border-radius: 1rem;
   opacity: 1;
-  transition: all 0.6s cubic-bezier(0.56, 0, 0.07, 1.01);
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
 #puzzle_game.on {
   opacity: 0;
@@ -425,12 +426,18 @@
   width: 100%;
   position: absolute;
   top: 19%;
+  height: 8%;
+  justify-content: center;
+}
+.puzzle_area > .txt.on {
+  height: 14%;
 }
 .puzzle_area > .txt div {
   font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
-.puzzle_area > .txt div.on {
-  font-size: 1.4rem;
+.puzzle_area > .txt.on div {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #5f88c6;
 }
 .fix_txt {
   width: 100%;
@@ -447,40 +454,61 @@
 }
 #complete_popup {
   position: absolute;
-  top: 54%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   opacity: 0;
   pointer-events: none;
-  background: url(./img/together.png) center / contain no-repeat;
+  /* background: url(./img/together.png) center / contain no-repeat; */
   flex-direction: column;
   place-content: center;
   align-items: center;
   width: 60%;
-  height: clamp(40%, 116vw, 65%);
+  height: clamp(20%, 116vw, 65%);
   display: flex;
-  max-height: clamp(25rem, 116vw, 30rem);
-  min-width: 24rem;
+  max-height: clamp(15rem, 116vw, 30rem);
+  min-width: 22rem;
 }
 #complete_popup.on {
   opacity: 1;
   pointer-events: auto;
 }
-.complete_button {
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
+.pung_img {
+  width: 100%;
+  height: 100%;
+  background: url(./img/pung.gif) center / contain no-repeat;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
-
-.complete_button:hover {
-  background-color: #45a049;
+.pung_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+.success_img {
+  background: url(./img/together.png) center / contain no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+}
+.success_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+.complete_button {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  font-family: "ChosunCentennial";
+  top: 56%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 4rem;
 }
 
 /*퍼즐게임 e*/

@@ -284,6 +284,7 @@
   opacity: 0;
   flex-direction: column;
   place-content: center;
+  font-family: ChosunCentennial;
   transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
@@ -348,7 +349,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  transition: all .6s cubic-bezier(.56, 0, .07, 1.01);
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
   top: 0;
@@ -385,7 +386,7 @@
   grid-template-columns: repeat(3, 1fr);
   width: 70%;
   max-width: 27rem;
-  transition: all .6s cubic-bezier(.56, 0, .07, 1.01);
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: grid;
   position: absolute;
   top: 30%;
@@ -424,19 +425,26 @@
 
 .puzzle_area > .txt {
   flex-direction: column;
+  justify-content: center;
   gap: clamp(.2rem, 1vw, .5rem);
   width: 100%;
+  height: 8%;
   display: flex;
   position: absolute;
   top: 19%;
+}
+
+.puzzle_area > .txt.on {
+  height: 14%;
 }
 
 .puzzle_area > .txt div {
   font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
-.puzzle_area > .txt div.on {
-  font-size: 1.4rem;
+.puzzle_area > .txt.on div {
+  color: #5f88c6;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .fix_txt {
@@ -457,18 +465,17 @@
 #complete_popup {
   opacity: 0;
   pointer-events: none;
-  background: url("together.bddd8b10.png") center / contain no-repeat;
   flex-direction: column;
   place-content: center;
   align-items: center;
   width: 60%;
-  min-width: 24rem;
-  height: clamp(40%, 116vw, 65%);
-  max-height: clamp(25rem, 116vw, 30rem);
+  min-width: 22rem;
+  height: clamp(20%, 116vw, 65%);
+  max-height: clamp(15rem, 116vw, 30rem);
   transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
-  top: 54%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -478,19 +485,43 @@
   pointer-events: auto;
 }
 
+.pung_img {
+  opacity: 0;
+  background: url("pung.3e5d31c4.gif") center / contain no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+}
+
+.pung_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.success_img {
+  opacity: 0;
+  background: url("together.bddd8b10.png") center / contain no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+}
+
+.success_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .complete_button {
   color: #fff;
   cursor: pointer;
-  background-color: #4caf50;
-  border: none;
-  border-radius: 5px;
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.complete_button:hover {
-  background-color: #45a049;
+  width: 10rem;
+  height: 4rem;
+  font-family: ChosunCentennial;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /*# sourceMappingURL=index.e9a92ad8.css.map */

@@ -12,6 +12,10 @@
   .click_btn {
     bottom: clamp(18rem, 60vw, 30rem);
   }
+
+  .complete_button {
+    top: clamp(53%, 40vw, 55%);
+  }
 }
 
 @media (width <= 425px) {
@@ -28,6 +32,14 @@
   .page {
     height: 90%;
     top: -5.5%;
+  }
+
+  #complete_popup {
+    top: 48%;
+  }
+
+  .puzzle_area > .txt.on {
+    height: 16%;
   }
 }
 /*# sourceMappingURL=index.2ca6ad9c.css.map */

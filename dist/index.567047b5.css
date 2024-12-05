@@ -57,6 +57,11 @@ ul {
   list-style: none;
 }
 
+button {
+  background-color: #0000;
+  border: 0;
+}
+
 body {
   box-sizing: border-box;
   background: #fff;
@@ -65,7 +70,7 @@ body {
   height: 100%;
   min-height: 60rem;
   font-family: ChosunCentennial, Noto Sans KR, Nanum Square Neo;
-  transition: all .6s cubic-bezier(.56, 0, .07, 1.01);
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   position: absolute;
   top: 0;
   left: 50%;

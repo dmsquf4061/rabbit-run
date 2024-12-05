@@ -89,5 +89,32 @@ $(document).ready(function () {
       filter: "blur(1rem)",
       "clip-path": "inset(0rem)",
     });
+    setTimeout(() => {
+      $(".click_btn").css({
+        display: "none",
+      });
+    }, 100);
+  });
+
+  $(".complete_button").on("click", function () {
+    $(".game_page").css({
+      opacity: "0",
+      "pointer-events": "none",
+    });
+    $(".main_page").css({
+      filter: "none",
+      "clip-path": "inset(0rem)",
+    });
+    setTimeout(() => {
+      $(".game_page").css({
+        display: "none",
+      });
+      setTimeout(() => {
+        $(".click_btn").css({
+          opacity: "1",
+          animation: "size 2s ease-in-out",
+        });
+      }, 0);
+    }, 500);
   });
 });
