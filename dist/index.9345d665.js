@@ -69,7 +69,8 @@ $(document).ready(function() {
     $(".click_btn").on("click", function() {
         $(".game_page").css({
             opacity: "1",
-            "pointer-events": "auto"
+            "pointer-events": "auto",
+            background: "#31477345"
         });
         $(".main_page").css({
             filter: "blur(1rem)",

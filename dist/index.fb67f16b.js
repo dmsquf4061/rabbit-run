@@ -30,10 +30,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // 퍼즐 조각 생성
     function createPieces() {
-        pieces.forEach((piece)=>piece.remove()); // 기존 퍼즐 조각 제거
+        // 퍼즐 영역에 기존 조각이 있으면 모두 제거
+        pieces.forEach((piece)=>piece.remove());
         pieces = [];
-        const { pieceSize, gridSpacing } = calculatePieceSize();
         const placedPositions = new Set();
+        const { pieceSize, gridSpacing } = calculatePieceSize();
         for(let i = 0; i < gridSize * gridSize; i++){
             const piece = document.createElement("div");
             piece.className = "puzzle_piece";
@@ -50,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 randomCol = Math.floor(Math.random() * gridSize);
                 randomRow = Math.floor(Math.random() * gridSize);
                 positionKey = `${randomCol},${randomRow}`;
-            }while (placedPositions.has(positionKey)); // 중복된 위치 방지
+            }while (placedPositions.has(positionKey));
             placedPositions.add(positionKey);
             // 초기 위치 설정
             piece.style.left = `${randomCol * (pieceSize + gridSpacing)}px`;
@@ -150,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 퍼즐 완성 팝업 표시
     function showCompletePopup() {
         completePopup.classList.add("on");
+        puzzleArea.classList.add("on");
         disablePieces();
     }
     // 퍼즐 조각 이동 불가 상태로 설정
@@ -159,6 +161,9 @@ document.addEventListener("DOMContentLoaded", function() {
             piece.removeEventListener("mousedown", selectPiece);
             piece.removeEventListener("touchstart", selectPiece);
         });
+        // <div class="txt"> 내용 변경
+        const txtDiv = document.querySelector(".puzzle_area .txt");
+        if (txtDiv) txtDiv.innerHTML = "<div class='on'>\uC131\uACF5\uC774\uC624!</div>";
     }
     createPieces(); // 퍼즐 조각 생성
     // 윈도우 크기 변경 시 퍼즐 크기 재계산

@@ -19,13 +19,22 @@
   }
 }
 @media (max-width: 425px) {
+  .fix_txt {
+    bottom: -12%;
+  }
+  .fix_txt > div {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+  }
 }
 @media (max-width: 300px) {
   .click_btn {
   }
 }
 @media (max-height: 809px) {
+  .game_page {
+  }
   .page {
     height: 90%;
+    top: -5.5%;
   }
 }

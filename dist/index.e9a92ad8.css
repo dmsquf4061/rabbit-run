@@ -253,7 +253,7 @@
 
 .underwater_palace_img {
   pointer-events: none;
-  background: url("palace.0b6f4f94.gif") bottom / contain no-repeat;
+  background: url("palace.0b6f4f94.gif") bottom / contain repeat-x;
   width: 100%;
   height: 100%;
 }
@@ -378,16 +378,22 @@
 
 #puzzle_game {
   aspect-ratio: 1;
+  opacity: 1;
   background-color: #fff;
   border-radius: 1rem;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   width: 70%;
   max-width: 27rem;
+  transition: all .6s cubic-bezier(.56, 0, .07, 1.01);
   display: grid;
   position: absolute;
   top: 30%;
   overflow: hidden;
+}
+
+#puzzle_game.on {
+  opacity: 0;
 }
 
 .puzzle_piece {
@@ -429,15 +435,42 @@
   font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
+.puzzle_area > .txt div.on {
+  font-size: 1.4rem;
+}
+
+.fix_txt {
+  flex-direction: column;
+  gap: clamp(.2rem, 1vw, .5rem);
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: -6rem;
+}
+
+.fix_txt > div {
+  color: #fff;
+  font-family: Noto Sans KR;
+  font-size: 1.4rem;
+}
+
 #complete_popup {
   opacity: 0;
   pointer-events: none;
-  width: 100%;
-  height: 100%;
+  background: url("together.bddd8b10.png") center / contain no-repeat;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 60%;
+  min-width: 24rem;
+  height: clamp(40%, 116vw, 65%);
+  max-height: clamp(25rem, 116vw, 30rem);
   transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #complete_popup.on {

@@ -251,7 +251,7 @@
   height: 100%;
   background: url(./img/palace.gif);
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: bottom;
   pointer-events: none;
 }
@@ -387,8 +387,12 @@
   top: 30%;
   overflow: hidden;
   border-radius: 1rem;
+  opacity: 1;
+  transition: all 0.6s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
-
+#puzzle_game.on {
+  opacity: 0;
+}
 .puzzle_piece {
   position: absolute;
   width: 33.33%;
@@ -425,15 +429,39 @@
 .puzzle_area > .txt div {
   font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
+.puzzle_area > .txt div.on {
+  font-size: 1.4rem;
+}
+.fix_txt {
+  width: 100%;
+  bottom: -6rem;
+  position: absolute;
+  gap: clamp(0.2rem, 1vw, 0.5rem);
+  display: flex;
+  flex-direction: column;
+}
+.fix_txt > div {
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "Noto Sans KR";
+}
 #complete_popup {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   opacity: 0;
   pointer-events: none;
+  background: url(./img/together.png) center / contain no-repeat;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 60%;
+  height: clamp(40%, 116vw, 65%);
+  display: flex;
+  max-height: clamp(25rem, 116vw, 30rem);
+  min-width: 24rem;
 }
 #complete_popup.on {
   opacity: 1;
