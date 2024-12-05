@@ -26,6 +26,6 @@
 }
 @media (max-height: 809px) {
   .page {
-    width: 90%;
+    height: 90%;
   }
 }
