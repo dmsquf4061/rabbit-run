@@ -241,10 +241,11 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, #ddebff, #c3dbff);
-  position: relative;
+  position: absolute;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  top: 0;
 }
 .underwater_palace_img {
   width: 100%;
@@ -339,6 +340,7 @@
     transform: perspective(500px) scale(1) translateX(-50%);
   }
 }
+
 /*메인 페이지 e*/
 
 /*퍼즐게임 s*/
@@ -512,3 +514,21 @@
 }
 
 /*퍼즐게임 e*/
+
+/*업힌 자라와 토끼 s*/
+.shiny_img {
+  background: url(./img/shiny.gif);
+  position: absolute;
+  transform: translateX(-50%);
+  transform-origin: left bottom;
+  left: 50%;
+  bottom: 29rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  opacity: 0;
+}
+/*업힌 자라와 토끼 e*/
