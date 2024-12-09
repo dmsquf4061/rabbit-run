@@ -381,7 +381,7 @@
 #puzzle_game {
   aspect-ratio: 1;
   opacity: 1;
-  background-color: #fff;
+  background: #fff;
   border-radius: 1rem;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
@@ -399,6 +399,7 @@
 }
 
 .puzzle_piece {
+  border: .1rem solid #fff;
   width: 33.33%;
   height: 33.33%;
   transition: left .2s, top .2s;
@@ -526,18 +527,96 @@
   transform: translateX(-50%);
 }
 
+.go_page {
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+}
+
 .shiny_img {
   transform-origin: 0 100%;
-  cursor: pointer;
   opacity: 0;
-  background: url("shiny.1fb0baf6.gif");
+  pointer-events: none;
+  z-index: 1;
+  background: url("shiny.1fb0baf6.gif") 0 0 / contain;
   flex-direction: column;
   place-content: center;
+  width: 10rem;
+  height: 10rem;
   transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
-  bottom: 29rem;
+  bottom: 23rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.piggyback_img {
+  transform-origin: 0 100%;
+  pointer-events: none;
+  z-index: -5;
+  opacity: 0;
+  background: url("zara.4e5d11c5.gif") 0 0 / contain;
+  flex-direction: column;
+  place-content: center;
+  width: clamp(5rem, 6vw, 6rem);
+  height: clamp(5rem, 6vw, 6rem);
+  transition: all 4s cubic-bezier(.56, 0, .07, 1.01);
+  display: flex;
+  position: absolute;
+  bottom: 26rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.go_page > .transition {
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: -100%;
+}
+
+.my_way_page {
+  display: none;
+}
+
+.repeat_img {
+  opacity: 0;
+  background-color: #0000;
+  background-image: url("repeat.37a9e050.png"), linear-gradient(to top, #ddebff, #c3dbff);
+  background-position: 0 0, 0 0;
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: -100%;
+}
+
+.gopiggyback_img {
+  background: url("zara.4e5d11c5.gif") 0 0 / contain no-repeat;
+  width: clamp(8rem, 8vw, 12rem);
+  height: clamp(8rem, 8vw, 12rem);
+  transition: all 4s cubic-bezier(.56, 0, .07, 1.01);
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.repeat {
+  background: url("zara.4e5d11c5.gif") 0 0 / contain;
 }
 /*# sourceMappingURL=index.e9a92ad8.css.map */

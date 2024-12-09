@@ -386,7 +386,7 @@
   width: 70%;
   max-width: 27rem;
   aspect-ratio: 1 / 1;
-  background-color: #fff;
+  background: #fff;
   top: 30%;
   overflow: hidden;
   border-radius: 1rem;
@@ -401,6 +401,7 @@
   width: 33.33%;
   height: 33.33%;
   transition: left 0.2s, top 0.2s;
+  border: 0.1rem solid #fff;
 }
 
 .puzzle_piece img {
@@ -516,19 +517,93 @@
 /*퍼즐게임 e*/
 
 /*업힌 자라와 토끼 s*/
+.go_page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  z-index: 1;
+}
 .shiny_img {
   background: url(./img/shiny.gif);
+  background-size: contain;
   position: absolute;
   transform: translateX(-50%);
   transform-origin: left bottom;
   left: 50%;
-  bottom: 29rem;
+  bottom: 23rem;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  cursor: pointer;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   opacity: 0;
+  width: 10rem;
+  height: 10rem;
+  pointer-events: none;
+  z-index: 1;
 }
+.piggyback_img {
+  background: url(./img/zara.gif);
+  background-size: contain;
+  position: absolute;
+  transform: translateX(-50%);
+  transform-origin: left bottom;
+  left: 50%;
+  bottom: 26rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  transition: all 4s cubic-bezier(0.56, 0, 0.07, 1.01);
+  width: clamp(5rem, 6vw, 6rem);
+  height: clamp(5rem, 6vw, 6rem);
+  pointer-events: none;
+  z-index: -5;
+  opacity: 0;
+}
+.go_page > .transition {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: -100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1;
+}
+
+.my_way_page {
+  display: none;
+}
+.repeat_img {
+  width: 100%;
+  height: 200%;
+  background: url("./img/repeat.png"), linear-gradient(to top, #ddebff, #c3dbff);
+  background-size: contain;
+  background-repeat: repeat-y;
+  position: absolute;
+  top: -100%;
+  opacity: 0;
+}
+.gopiggyback_img {
+  background: url(./img/zara.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  transition: all 4s cubic-bezier(0.56, 0, 0.07, 1.01);
+  width: clamp(8rem, 8vw, 12rem);
+  height: clamp(8rem, 8vw, 12rem);
+  display: none;
+}
+.repeat {
+  background: url(./img/zara.gif);
+  background-size: contain;
+}
+/*앞으로 가는 페이지 e*/
 /*업힌 자라와 토끼 e*/
