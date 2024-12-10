@@ -356,19 +356,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 게임 완료 체크
   function checkGameCompletion() {
-    const pungImg = document.querySelector(".pung_img");
+    const seaImg = document.querySelector(".sea_img");
+    const pungpungImg = document.querySelector(".pungpung_img");
     const ceramicsImg = document.querySelector(".ceramics_img");
     const cardTxt = document.querySelector(".card_area .txt");
+    const gameBoard = document.querySelector(".game_board");
     const allMatched = Array.from(cards).every((card) =>
       card.classList.contains("matched")
     );
 
     if (allMatched) {
-      const gameBoard = document.querySelector(".game_board");
-      gameBoard.style.display = "none";
-
+      gameBoard.classList.add("on");
       completePopup.classList.add("on");
-      pungImg.classList.add("on");
+      pungpungImg.classList.add("on");
+      seaImg.classList.add("on");
 
       // 일정 시간 후 두 번째 이미지 표시
       setTimeout(() => {

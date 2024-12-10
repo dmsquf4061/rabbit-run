@@ -262,7 +262,7 @@
 .wave_left_img {
   background: url("wave_left.1a151e0e.png") center / contain no-repeat;
   width: 45%;
-  height: 20%;
+  height: 15%;
   animation: 4s infinite wave04;
   position: absolute;
   top: 10%;
@@ -272,7 +272,7 @@
 .wave_right_img {
   background: url("wave_right.c7f5da7e.png") center / contain no-repeat;
   width: 45%;
-  height: 20%;
+  height: 15%;
   animation: 4s infinite wave03;
   position: absolute;
   top: 30%;
@@ -317,6 +317,16 @@
 
 .terrapin_img1 {
   background: url("terrapin_1.cb97b80a.png") 0 0 / contain no-repeat;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  position: absolute;
+  top: 3.6rem;
+  left: 2rem;
+}
+
+.rabbit_img1 {
+  background: url("rabbit_1.5b02044f.png") 0 0 / contain no-repeat;
   width: 3rem;
   height: 3rem;
   margin: 0;
@@ -436,6 +446,7 @@
   gap: clamp(.2rem, 1vw, .5rem);
   width: 100%;
   height: 8%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
   top: 19%;
@@ -656,6 +667,190 @@
   left: 2rem;
 }
 
+.sea_img.on .zara_img {
+  transform-origin: center;
+  background: url("zara1.771da695.gif") 0 0 / contain no-repeat;
+  width: clamp(14rem, 25vw, 18rem);
+  height: clamp(14rem, 25vw, 18rem);
+  margin: 0;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sea_img.on .propulsion_btn {
+  display: none;
+}
+
+.shore_img {
+  opacity: 0;
+  background: linear-gradient(to top, #ded7ca, #fff, #ddebff);
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mountain_img {
+  background: url("mountain.3496389b.png") center / contain no-repeat;
+  width: 80%;
+  height: 25%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cloud01_img {
+  background: url("cloud1.6e848015.png") center / contain no-repeat;
+  width: 25%;
+  height: 10%;
+  animation: 4s infinite wave01;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+
+.cloud02_img {
+  background: url("cloud2.b270507d.png") center / contain no-repeat;
+  width: 25%;
+  height: 10%;
+  animation: 4s infinite wave02;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.dol01_img {
+  background: url("dol01.05324811.png") 0 / contain no-repeat;
+  width: 25%;
+  height: 20%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.dol02_img {
+  background: url("dol02.62b75631.png") 100% / contain no-repeat;
+  width: 25%;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+
+.rabbit_turtle_img {
+  background: url("shore01.a825419d.png") center / contain no-repeat;
+  width: 92%;
+  height: 24rem;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+  bottom: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rabbit_turtle_img.on {
+  background: url("shore02.a2e9764f.png") center / contain no-repeat;
+}
+
+.rabbit_turtle_img .balloon_img1 {
+  background: url("balloon.713ea536.png") 0 0 / contain no-repeat;
+  width: 22rem;
+  height: 7.5rem;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-74%);
+}
+
+.rabbit_turtle_img .balloon_img2 {
+  opacity: 0;
+  background: url("balloon.713ea536.png") 0 0 / contain no-repeat;
+  width: 22rem;
+  height: 7.5rem;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(5%);
+}
+
+.rabbit_turtle_img.on .balloon_img1 {
+  opacity: 0;
+}
+
+.rabbit_turtle_img.on .balloon_img2 {
+  opacity: 1;
+}
+
+.rabbit_turtle_img .balloon_img2 > .btn {
+  color: #5f88c6;
+  cursor: pointer;
+  pointer-events: auto;
+  width: 12rem;
+  height: 4rem;
+  font-family: ChosunCentennial;
+  font-size: 1.6rem;
+  position: absolute;
+  top: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rabbit_turtle_img .balloon_img1 > .terrapin_img1 {
+  top: 1.3rem;
+  left: 2.2rem;
+}
+
+.rabbit_turtle_img .balloon_img1 > .txt {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 2rem;
+  left: 6.5rem;
+}
+
+.rabbit_turtle_img .balloon_img2 > .rabbit_img1 {
+  top: 1.3rem;
+  left: 2.2rem;
+}
+
+.rabbit_turtle_img .balloon_img2 > .txt {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 2rem;
+  left: 6.5rem;
+}
+
+.sea_waves_img {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.sea01 {
+  background: url("sea01.cb084b83.png") bottom / contain repeat-x;
+  width: 100%;
+  height: 50%;
+  animation: 4s infinite wave03;
+  position: absolute;
+  bottom: 5%;
+}
+
+.sea_waves_img .sea02 {
+  background: url("sea02.6df28245.png") bottom / contain repeat-x;
+  width: 100%;
+  height: 50%;
+  animation: 4s infinite wave04;
+  position: absolute;
+  bottom: -1%;
+}
+
 .card_game {
   width: 100%;
   height: 100%;
@@ -663,7 +858,7 @@
 }
 
 .card_area {
-  border-radius: 10px;
+  border-radius: 1rem;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -689,6 +884,7 @@
   gap: clamp(.2rem, 1vw, .5rem);
   width: 100%;
   height: 8%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
   top: 19%;
@@ -739,6 +935,10 @@
   overflow: hidden;
 }
 
+.game_board.on {
+  opacity: 0;
+}
+
 .card {
   cursor: pointer;
   width: 100%;
@@ -748,7 +948,7 @@
 
 .card-front, .card-back {
   backface-visibility: hidden;
-  border-radius: 10px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   transition: transform .6s;
@@ -777,15 +977,15 @@
   }
 
   25% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   50% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   75% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -803,10 +1003,10 @@
   flex-direction: column;
   place-content: center;
   align-items: center;
-  width: 75%;
+  width: 80%;
   min-width: 22rem;
-  height: clamp(20%, 116vw, 65%);
-  max-height: clamp(15rem, 116vw, 30rem);
+  height: clamp(30%, 116vw, 70%);
+  max-height: clamp(30rem, 116vw, 55rem);
   transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
@@ -820,7 +1020,22 @@
   pointer-events: auto;
 }
 
+.pungpung_img {
+  opacity: 0;
+  background: url("pungpung.c346f767.gif") center / contain no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+}
+
+.pungpung_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .ceramics_img {
+  opacity: 0;
   background: url("ceramics.7949202c.png") center / contain no-repeat;
   width: 100%;
   height: 100%;
@@ -833,7 +1048,7 @@
 }
 
 #cardgame_popup .complete_button {
-  color: #fff;
+  color: #5f88c6;
   cursor: pointer;
   z-index: 10;
   width: 10rem;
@@ -841,8 +1056,109 @@
   font-family: ChosunCentennial;
   font-size: 1.8rem;
   position: absolute;
-  top: 56%;
+  top: 48%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.game_container {
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.game-area {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  width: 320px;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.path {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.path-segment {
+  background-color: #ffff0080;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.path-segment:last-child {
+  background-color: #ff000080;
+  width: 15px;
+  height: 15px;
+}
+
+.character {
+  z-index: 10;
+  background: #ddd;
+  width: 80px;
+  height: 80px;
+  transition: bottom .5s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.climb-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 4px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 8px 16px;
+  display: flex;
+}
+
+.climb-button:hover {
+  background-color: #2563eb;
+}
+
+.climb-button:disabled {
+  cursor: not-allowed;
+  background-color: #9ca3af;
+}
+
+.chevron-up {
+  margin-right: 8px;
+}
+
+.goal-alert {
+  text-align: center;
+  background-color: #d1fae5;
+  border: 1px solid #34d399;
+  border-radius: 4px;
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.goal-alert h3 {
+  color: #065f46;
+  margin-top: 0;
+}
+
+.goal-alert p {
+  color: #047857;
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=index.e9a92ad8.css.map */

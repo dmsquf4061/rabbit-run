@@ -258,7 +258,7 @@
 }
 .wave_left_img {
   width: 45%;
-  height: 20%;
+  height: 15%;
   background: url(./img/wave_left.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -270,7 +270,7 @@
 }
 .wave_right_img {
   width: 45%;
-  height: 20%;
+  height: 15%;
   background: url(./img/wave_right.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -319,6 +319,17 @@
   width: 3rem;
   height: 3rem;
   background: url(./img/terrapin_1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  position: absolute;
+  top: 3.6rem;
+  left: 2rem;
+}
+.rabbit_img1 {
+  width: 3rem;
+  height: 3rem;
+  background: url(./img/rabbit_1.png);
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0;
@@ -435,6 +446,8 @@
   top: 19%;
   height: 8%;
   justify-content: center;
+  transition: 0.3s;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
 .puzzle_area > .txt.on {
   height: 14%;
@@ -520,7 +533,7 @@
 
 /*퍼즐게임 e*/
 
-/*업힌 자라와 토끼 s*/
+/*트랜지션 스토리 s*/
 .go_page {
   width: 100%;
   height: 100%;
@@ -626,6 +639,7 @@
   z-index: -1;
   display: none;
 }
+
 .propulsion_img {
   background: url(./img/zara2.gif);
   width: clamp(14rem, 25vw, 18rem);
@@ -674,8 +688,209 @@
   top: 3.6rem;
   left: 2rem;
 }
+.sea_img.on .zara_img {
+  background: url(./img/zara1.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  position: absolute;
+  /* transition: all 3s cubic-bezier(0.56, 0, 0.07, 1.01); */
+  transform: translateX(-50%);
+  transform-origin: center;
+  left: 50%;
+  bottom: 10%;
+  width: clamp(14rem, 25vw, 18rem);
+  height: clamp(14rem, 25vw, 18rem);
+}
+.sea_img.on .propulsion_btn {
+  display: none;
+}
+.shore_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #ded7ca, #fff, #ddebff);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+}
+.shore_img.on {
+}
+.mountain_img {
+  background: url(./img/mountain.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80%;
+  height: 25%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+}
+.cloud01_img {
+  background: url(./img/cloud1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25%;
+  height: 10%;
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  animation: wave01 4s infinite;
+}
+.cloud02_img {
+  background: url(./img/cloud2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25%;
+  height: 10%;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  animation: wave02 4s infinite;
+}
+.dol01_img {
+  background: url(./img/dol01.png);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 20%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.dol02_img {
+  background: url(./img/dol02.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 20%;
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
+.rabbit_turtle_img {
+  background: url(./img/shore01.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 92%;
+  height: 24rem;
+  position: absolute;
+  bottom: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+}
+
+.rabbit_turtle_img.on {
+  background: url(./img/shore02.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rabbit_turtle_img .balloon_img1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-74%);
+  width: 22rem;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  height: 7.5rem;
+  background: url(./img/balloon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.rabbit_turtle_img .balloon_img2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(5%);
+  width: 22rem;
+  top: -1rem;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  height: 7.5rem;
+  background: url(./img/balloon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.rabbit_turtle_img.on .balloon_img1 {
+  opacity: 0;
+}
+.rabbit_turtle_img.on .balloon_img2 {
+  opacity: 1;
+}
+.rabbit_turtle_img .balloon_img2 > .btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  color: #5f88c6;
+  top: -3.5rem;
+  font-family: "ChosunCentennial";
+  cursor: pointer;
+  pointer-events: auto;
+  width: 12rem;
+  height: 4rem;
+}
+.rabbit_turtle_img .balloon_img1 > .terrapin_img1 {
+  top: 1.3rem;
+  left: 2.2rem;
+}
+.rabbit_turtle_img .balloon_img1 > .txt {
+  top: 2rem;
+  left: 6.5rem;
+  font-size: 1.6rem;
+  position: absolute;
+}
+.rabbit_turtle_img .balloon_img2 > .rabbit_img1 {
+  top: 1.3rem;
+  left: 2.2rem;
+}
+.rabbit_turtle_img .balloon_img2 > .txt {
+  top: 2rem;
+  left: 6.5rem;
+  font-size: 1.6rem;
+  position: absolute;
+}
+.sea_waves_img {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sea01 {
+  background: url(./img/sea01.png);
+  background-position: bottom;
+  background-size: contain;
+  /* background-size: auto 100%; */ /* 세로 크기를 100%로 맞추고 가로 크기는 원본 비율 유지 */
+  background-repeat: repeat-x; /* 가로로 반복 */
+  width: 100%;
+  height: 50%; /* 부모 요소에 맞추어 높이를 100%로 설정 */
+  animation: wave03 4s infinite;
+  position: absolute;
+  bottom: 5%;
+}
+.sea_waves_img .sea02 {
+  background: url(./img/sea02.png);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 50%;
+  animation: wave04 4s infinite;
+  position: absolute;
+  bottom: -1%;
+}
 /*앞으로 가는 페이지 e*/
-/*업힌 자라와 토끼 e*/
+/*트랜지션 스토리 e*/
 
 /*카드게임 s*/
 .card_game {
@@ -684,7 +899,7 @@
   height: 100%;
 }
 .card_area {
-  border-radius: 10px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -711,6 +926,7 @@
   top: 19%;
   height: 8%;
   justify-content: center;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
 .card_area > .txt.on {
   height: 14%;
@@ -752,7 +968,9 @@
   height: 50%;
   align-content: center;
 }
-
+.game_board.on {
+  opacity: 0;
+}
 .card {
   width: 100%;
   height: 95%;
@@ -768,7 +986,7 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10px;
+  border-radius: 1rem;
   transition: transform 0.6s;
 }
 
@@ -797,13 +1015,13 @@
     transform: translateX(0);
   }
   25% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   50% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   75% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     transform: translateX(0);
@@ -826,22 +1044,33 @@
   flex-direction: column;
   place-content: center;
   align-items: center;
-  width: 75%;
-  height: clamp(20%, 116vw, 65%);
+  width: 80%;
+  height: clamp(30%, 116vw, 70%);
   display: flex;
-  max-height: clamp(15rem, 116vw, 30rem);
+  max-height: clamp(30rem, 116vw, 55rem);
   min-width: 22rem;
 }
 #cardgame_popup.on {
   opacity: 1;
   pointer-events: auto;
 }
-
+.pungpung_img {
+  width: 100%;
+  height: 100%;
+  background: url(./img/pungpung.gif) center / contain no-repeat;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+}
+.pungpung_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
 .ceramics_img {
   background: url(./img/ceramics.png) center / contain no-repeat;
   width: 100%;
   height: 100%;
-  /* opacity: 0; */
+  opacity: 0;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
 .ceramics_img.on {
@@ -850,10 +1079,10 @@
 }
 #cardgame_popup .complete_button {
   font-size: 1.8rem;
-  color: #fff;
+  color: #5f88c6;
   cursor: pointer;
   font-family: "ChosunCentennial";
-  top: 56%;
+  top: 48%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -862,3 +1091,95 @@
   z-index: 10;
 }
 /*카드게임 e*/
+/*달리기게임 s*/
+.game_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+}
+.game-area {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.path-segment {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 0, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+  left: 50%;
+}
+.path-segment:last-child {
+  background-color: rgba(255, 0, 0, 0.5);
+  width: 15px;
+  height: 15px;
+}
+.character {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.5s ease-in-out;
+  z-index: 10;
+}
+.climb-button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.climb-button:hover {
+  background-color: #2563eb;
+}
+.climb-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+.chevron-up {
+  margin-right: 8px;
+}
+.goal-alert {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #d1fae5;
+  border: 1px solid #34d399;
+  border-radius: 4px;
+  text-align: center;
+}
+.goal-alert h3 {
+  color: #065f46;
+  margin-top: 0;
+}
+.goal-alert p {
+  color: #047857;
+  margin-bottom: 0;
+}
+/*달리기게임 e*/

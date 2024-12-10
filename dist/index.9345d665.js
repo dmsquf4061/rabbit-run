@@ -62,7 +62,7 @@ $(document).ready(function() {
         });
     };
     // 퍼즐 게임 완료 버튼 클릭 이벤트
-    const handleGameComplete = async ()=>{
+    const handlePuzzleComplete = async ()=>{
         $(".game_page").css({
             opacity: "0",
             "pointer-events": "none"
@@ -158,12 +158,53 @@ $(document).ready(function() {
             background: "#31477345"
         });
     };
+    const handleCardComplete = async ()=>{
+        $(".game_page").css({
+            opacity: "0",
+            "pointer-events": "none"
+        });
+        $(".main_page").css({
+            filter: "none",
+            "clip-path": "inset(0rem)"
+        });
+        await delay(500);
+        $(".zara_img").css({
+            bottom: "110%",
+            transition: "all 3s cubic-bezier(0.56, 0, 0.07, 1.01)"
+        });
+        $(".card_game").css({
+            display: "none"
+        });
+        await delay(2000);
+        $(".shore_img").css({
+            opacity: "1"
+        });
+        await delay(1200);
+        $(".rabbit_turtle_img").addClass("on");
+        $(".sea_img").css({
+            display: "none"
+        });
+        $(".transition").css({
+            display: "none"
+        });
+    };
+    const handleShoreBtn = async ()=>{
+        $(".shore_img").css({
+            filter: "blur(1rem)",
+            "clip-path": "inset(0rem)"
+        });
+        $(".game_container").css({
+            opacity: "1"
+        });
+    };
     // 초기화 및 이벤트 바인딩
     animateSection1();
     $(".start_btn").on("click", handleStartClick);
     $(".piggyback_btn").on("click", handleGamePuzzle);
-    $(".complete_button").on("click", handleGameComplete);
+    $("#puzzlegame_popup .complete_button").on("click", handlePuzzleComplete);
+    $("#cardgame_popup .complete_button").on("click", handleCardComplete);
     $(".propulsion_btn").on("click", handleGameCard);
+    $(".shore_img .btn").on("click", handleShoreBtn);
 });
 
 //# sourceMappingURL=index.9345d665.js.map
