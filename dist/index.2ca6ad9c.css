@@ -3,18 +3,30 @@
     width: 100%;
   }
 
-  .click_btn {
+  .piggyback_btn {
     bottom: clamp(18rem, 60vw, 60rem);
+  }
+
+  .shiny_img, .piggyback_img {
+    bottom: clamp(20rem, 54vw, 44rem);
   }
 }
 
 @media (width <= 479px) {
-  .click_btn {
+  .piggyback_btn {
     bottom: clamp(18rem, 60vw, 30rem);
   }
 
   .complete_button {
     top: clamp(53%, 40vw, 55%);
+  }
+
+  .shiny_img {
+    bottom: clamp(5rem, 52vw, 36rem);
+  }
+
+  .piggyback_img {
+    bottom: clamp(5rem, 47vw, 44rem);
   }
 }
 
@@ -35,7 +47,7 @@
   }
 
   #complete_popup {
-    top: 48%;
+    top: 54%;
   }
 
   .puzzle_area > .txt.on {

@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM fully loaded");
 
+  //퍼즐게임s
   const puzzleArea = document.getElementById("puzzle_game");
-  const completePopup = document.getElementById("complete_popup");
+  const completePopup = document.getElementById("puzzlegame_popup");
   const gridSize = 3;
   let pieces = [];
   let selectedPiece = null;
@@ -231,4 +232,174 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", function () {
     createPieces(); // 크기 변경 시 퍼즐을 새로 만들어서 다시 배치
   });
+
+  //카드게임s
+  // 전역 변수 설정
+  const cards = document.querySelectorAll(".card");
+  const completeButton = document.getElementById("cardgame_popup");
+  let flippedCards = [];
+  let isProcessing = false;
+
+  // 이미지 경로 매핑
+  const cardImages = {
+    1: "./css/img/card_1.png",
+    2: "./css/img/card_2.png",
+    3: "./css/img/card_3.png",
+  };
+
+  // 카드에 이미지 추가
+  function addCardImages() {
+    cards.forEach((card) => {
+      const value = card.dataset.value;
+      const front = card.querySelector(".card-front");
+      if (value && front) {
+        front.style.backgroundImage = `url(${cardImages[value]})`;
+        front.style.backgroundSize = "contain";
+        front.style.backgroundPosition = "center";
+        front.style.backgroundRepeat = "no-repeat";
+      }
+    });
+  }
+
+  // 카드 섞기 함수
+  function shuffleCards() {
+    const gameBoard = document.querySelector(".game_board");
+    const cardArray = Array.from(cards);
+
+    // Fisher-Yates 셔플 알고리즘
+    for (let i = cardArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      gameBoard.appendChild(cardArray[j]);
+    }
+  }
+
+  // 카드 클릭 이벤트 설정
+  function initializeGame() {
+    addCardImages(); // 이미지 추가
+    shuffleCards(); // 카드 섞기
+    cards.forEach((card) => {
+      card.addEventListener("click", handleCardClick);
+    });
+  }
+
+  // 카드 클릭 처리
+  function handleCardClick(event) {
+    const card = event.target.closest(".card");
+
+    // 클릭 무시해야 할 상황 체크
+    if (shouldIgnoreClick(card)) return;
+
+    // 카드 뒤집기
+    flipCard(card);
+
+    // 두 카드가 뒤집혔을 때 처리
+    if (flippedCards.length === 2) {
+      handlePairComparison();
+    }
+  }
+
+  // 클릭 무시해야 할 상황 체크
+  function shouldIgnoreClick(card) {
+    return (
+      isProcessing ||
+      card.classList.contains("flipped") ||
+      card.classList.contains("matched") ||
+      flippedCards.includes(card)
+    );
+  }
+
+  // 카드 뒤집기
+  function flipCard(card) {
+    card.classList.add("flipped");
+    flippedCards.push(card);
+  }
+
+  // 카드 짝 비교
+  function handlePairComparison() {
+    isProcessing = true;
+    const [firstCard, secondCard] = flippedCards;
+
+    if (isMatch(firstCard, secondCard)) {
+      handleMatch(firstCard, secondCard);
+      checkGameCompletion();
+    } else {
+      handleMismatch(firstCard, secondCard);
+    }
+  }
+
+  // 카드 일치 확인
+  function isMatch(card1, card2) {
+    return card1.dataset.value === card2.dataset.value;
+  }
+
+  // 카드 일치했을 때 처리
+  function handleMatch(card1, card2) {
+    card1.classList.add("matched");
+    card2.classList.add("matched");
+    resetFlippedCards();
+  }
+
+  // 카드 불일치했을 때 처리
+  function handleMismatch(card1, card2) {
+    setTimeout(() => {
+      card1.classList.remove("flipped");
+      card2.classList.remove("flipped");
+      resetFlippedCards();
+    }, 1000);
+  }
+
+  // 뒤집힌 카드 상태 초기화
+  function resetFlippedCards() {
+    flippedCards = [];
+    isProcessing = false;
+  }
+
+  // 게임 완료 체크
+  function checkGameCompletion() {
+    const pungImg = document.querySelector(".pung_img");
+    const ceramicsImg = document.querySelector(".ceramics_img");
+    const cardTxt = document.querySelector(".card_area .txt");
+    const allMatched = Array.from(cards).every((card) =>
+      card.classList.contains("matched")
+    );
+
+    if (allMatched) {
+      const gameBoard = document.querySelector(".game_board");
+      gameBoard.style.display = "none";
+
+      completePopup.classList.add("on");
+      pungImg.classList.add("on");
+
+      // 일정 시간 후 두 번째 이미지 표시
+      setTimeout(() => {
+        ceramicsImg.classList.add("on");
+      }, 300); // 1초(1000ms) 후 실행
+
+      // 퍼즐 영역 클래스 추가
+      completeButton.classList.add("on");
+
+      disablePieces();
+
+      cardTxt.classList.add("on");
+      cardTxt.innerHTML = "<div>받으시오!</div>";
+
+      // setTimeout(() => {
+      //   completeButton.style.opacity = "block";
+      // }, 1000);
+    }
+  }
+
+  // 게임 전체 초기화
+  function resetGame() {
+    flippedCards = [];
+    isProcessing = false;
+    completeButton.style.display = "none";
+    cards.forEach((card) => {
+      card.classList.remove("flipped", "matched");
+    });
+    shuffleCards(); // 게임 리셋 시 카드 다시 섞기
+  }
+
+  // 게임 시작
+  initializeGame();
 });

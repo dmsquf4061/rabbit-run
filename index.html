@@ -81,10 +81,10 @@
     <main class="main_page">
       <div class="wave_left_img"></div>
       <div class="wave_right_img"></div>
-      <button class="click_btn">
+      <button class="piggyback_btn">
         <div class="btn">Click!</div>
         <div class="balloon_img">
-          <div class="terrapin_img"></div>
+          <div class="terrapin_img1"></div>
           <div class="txt">토선생 제 등에 업히시오!</div>
         </div>
       </button>
@@ -94,38 +94,92 @@
         <div class="shiny_img"></div>
         <div class="piggyback_img"></div>
         <img class="transition" src="./css/img/transition.gif" alt="거품" />
-        <div class="repeat_img"></div>
+        <div class="repeat_back">
+          <div class="repeat_img"></div>
+        </div>
         <div class="gopiggyback_img"></div>
+        <div class="sea_img">
+          <button class="propulsion_btn">
+            <div class="btn">Click!</div>
+            <div class="balloon_img">
+              <div class="terrapin_img2"></div>
+              <div class="txt">추진력이 필요하오...</div>
+            </div>
+            <div class="propulsion_img"></div>
+          </button>
+        </div>
       </div>
       <!--업힌 토끼와 자라 e-->
     </main>
     <section class="game_page">
       <div class="page">
         <!--퍼즐게임 s-->
-        <div class="puzzle_area">
-          <h3 class="title">조각 맞추기</h3>
-          <div class="txt">
-            <div>토선생이 자라 등에 업힐 수 있도록</div>
-            <div>조각을 옮겨 그림을 완성해 주시오.</div>
+        <div class="puzzle_game">
+          <div class="puzzle_area">
+            <h3 class="title">조각 맞추기</h3>
+            <div class="txt">
+              <div>토선생이 자라 등에 업힐 수 있도록</div>
+              <div>조각을 옮겨 그림을 완성해 주시오.</div>
+            </div>
+            <div id="puzzle_game"></div>
           </div>
-          <div id="puzzle_game"></div>
+
+          <div id="puzzlegame_popup">
+            <div class="pung_img"></div>
+            <div class="success_img">
+              <button class="complete_button">Click!</button>
+            </div>
+          </div>
         </div>
+        <!--퍼즐게임 e-->
+        <!--카드게임 s-->
+        <div class="card_game">
+          <div class="card_area">
+            <h3 class="title">같은 그림 짝 맞추기</h3>
+            <div class="txt">
+              <div>바다에 빠트린 유물을 찾아 주시오!</div>
+              <div>체력을 채워주는 비약을 답례로 드리겠소.</div>
+            </div>
+            <div class="game_board" id="gameBoard">
+              <div class="card" data-value="1">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+              </div>
+              <div class="card" data-value="2">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+              </div>
+              <div class="card" data-value="1">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+              </div>
+              <div class="card" data-value="2">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+              </div>
+              <div class="card" data-value="3">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+              </div>
+              <div class="card" data-value="3">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+              </div>
+            </div>
+          </div>
+          <div id="cardgame_popup">
+            <div class="pung_img"></div>
+            <div class="ceramics_img">
+              <button class="complete_button">Click!</button>
+            </div>
+          </div>
+        </div>
+        <!--카드게임 e-->
         <div class="fix_txt">
           <div>토끼런의 다양한 오브제들은 국가유산청에서</div>
           <div>제공하는 국가유산 자료를 기반으로 제작되었습니다.</div>
         </div>
-        <!--퍼즐게임 e-->
-      </div>
-      <div id="complete_popup">
-        <div class="pung_img"></div>
-        <div class="success_img">
-          <button class="complete_button">Click!</button>
-        </div>
       </div>
     </section>
-
-    <!-- <section class="my_way_page">
-      <div class="repeat_img"></div>
-    </section> -->
   </body>
 </html>

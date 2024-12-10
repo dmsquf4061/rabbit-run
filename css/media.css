@@ -4,21 +4,31 @@
   }
   .underwater_palace_img {
   }
-  .click_btn {
+  .piggyback_btn {
     bottom: clamp(18rem, 60vw, 60rem);
   }
-  #puzzle_game {
+  .shiny_img {
+    bottom: clamp(20rem, 54vw, 44rem);
+  }
+  .piggyback_img {
+    bottom: clamp(20rem, 54vw, 44rem);
   }
 }
 
 @media (max-width: 479px) {
   .underwater_palace_img {
   }
-  .click_btn {
+  .piggyback_btn {
     bottom: clamp(18rem, 60vw, 30rem);
   }
   .complete_button {
     top: clamp(53%, 40vw, 55%);
+  }
+  .shiny_img {
+    bottom: clamp(5rem, 52vw, 36rem);
+  }
+  .piggyback_img {
+    bottom: clamp(5rem, 47vw, 44rem);
   }
 }
 @media (max-width: 425px) {
@@ -41,7 +51,7 @@
     top: -5.5%;
   }
   #complete_popup {
-    top: 48%;
+    top: 54%;
   }
   .puzzle_area > .txt.on {
     height: 16%;

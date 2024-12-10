@@ -242,7 +242,7 @@
 }
 
 .main_page {
-  background: linear-gradient(to top, #ddebff, #c3dbff);
+  background: linear-gradient(to top, #ddebff, #c3dbff, #ddebff);
   align-items: flex-end;
   width: 100%;
   height: 100%;
@@ -279,7 +279,7 @@
   right: 2%;
 }
 
-.click_btn {
+.piggyback_btn {
   transform-origin: 0 100%;
   cursor: pointer;
   opacity: 0;
@@ -294,7 +294,7 @@
   transform: translateX(-50%);
 }
 
-.click_btn .btn {
+.piggyback_btn .btn {
   color: #5f88c6;
   font-size: 1.6rem;
 }
@@ -315,8 +315,8 @@
   left: 6rem;
 }
 
-.terrapin_img {
-  background: url("terrapin.974ec780.png") 0 0 / contain no-repeat;
+.terrapin_img1 {
+  background: url("terrapin_1.cb97b80a.png") 0 0 / contain no-repeat;
   width: 3rem;
   height: 3rem;
   margin: 0;
@@ -368,6 +368,11 @@
   max-height: clamp(34rem, 116vw, 53rem);
   display: flex;
   position: relative;
+}
+
+.puzzle_game {
+  width: 100%;
+  height: 100%;
 }
 
 .puzzle_area {
@@ -449,40 +454,25 @@
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
-.fix_txt {
-  flex-direction: column;
-  gap: clamp(.2rem, 1vw, .5rem);
-  width: 100%;
-  display: flex;
-  position: absolute;
-  bottom: -6rem;
-}
-
-.fix_txt > div {
-  color: #fff;
-  font-family: Noto Sans KR;
-  font-size: 1.4rem;
-}
-
-#complete_popup {
+#puzzlegame_popup {
   opacity: 0;
   pointer-events: none;
   flex-direction: column;
   place-content: center;
   align-items: center;
-  width: 60%;
+  width: 75%;
   min-width: 22rem;
   height: clamp(20%, 116vw, 65%);
   max-height: clamp(15rem, 116vw, 30rem);
   transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
-  top: 52%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#complete_popup.on {
+#puzzlegame_popup.on {
   opacity: 1;
   pointer-events: auto;
 }
@@ -514,7 +504,7 @@
   pointer-events: auto;
 }
 
-.complete_button {
+#puzzlegame_popup .complete_button {
   color: #fff;
   cursor: pointer;
   width: 10rem;
@@ -560,7 +550,7 @@
   pointer-events: none;
   z-index: -5;
   opacity: 0;
-  background: url("zara.4e5d11c5.gif") 0 0 / contain;
+  background: url("zara1.771da695.gif") 0 0 / contain;
   flex-direction: column;
   place-content: center;
   width: clamp(5rem, 6vw, 6rem);
@@ -588,27 +578,29 @@
   display: none;
 }
 
-.repeat_img {
+.repeat_back {
   opacity: 0;
-  background-color: #0000;
-  background-image: url("repeat.37a9e050.png"), linear-gradient(to top, #ddebff, #c3dbff);
-  background-position: 0 0, 0 0;
-  background-repeat: repeat-y;
-  background-size: contain;
-  background-attachment: scroll, scroll;
-  background-origin: padding-box, padding-box;
-  background-clip: border-box, border-box;
+  background: linear-gradient(to top, #ddebff, #c3dbff);
   width: 100%;
-  height: 200%;
+  height: 400%;
   position: absolute;
-  top: -100%;
+  top: -150%;
+}
+
+.repeat_img {
+  opacity: 1;
+  background: url("repeat.37a9e050.png") 0 0 / contain repeat-y;
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  bottom: 0;
 }
 
 .gopiggyback_img {
-  background: url("zara.4e5d11c5.gif") 0 0 / contain no-repeat;
+  background: url("zara1.771da695.gif") 0 0 / contain no-repeat;
   width: clamp(8rem, 8vw, 12rem);
   height: clamp(8rem, 8vw, 12rem);
-  transition: all 4s cubic-bezier(.56, 0, .07, 1.01);
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: none;
   position: absolute;
   top: 50%;
@@ -616,7 +608,241 @@
   transform: translate(-50%, -50%);
 }
 
-.repeat {
-  background: url("zara.4e5d11c5.gif") 0 0 / contain;
+.sea_img {
+  z-index: -1;
+  background: url("sea.c469b3fe.png") 0 0 / cover repeat-x;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.propulsion_img {
+  background: url("zara2.5ffb878b.gif") 0 0 / contain;
+  width: clamp(14rem, 25vw, 18rem);
+  height: clamp(14rem, 25vw, 18rem);
+  margin-top: 1rem;
+}
+
+.propulsion_btn {
+  transform-origin: 0 100%;
+  cursor: pointer;
+  pointer-events: auto;
+  flex-direction: column;
+  place-content: center;
+  font-family: ChosunCentennial;
+  transition: all 2s cubic-bezier(.56, 0, .07, 1.01);
+  display: flex;
+  position: absolute;
+  bottom: -35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.propulsion_btn .btn {
+  color: #5f88c6;
+  font-size: 1.6rem;
+}
+
+.terrapin_img2 {
+  background: url("terrapin_2.e413c248.png") 0 0 / contain no-repeat;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  position: absolute;
+  top: 3.6rem;
+  left: 2rem;
+}
+
+.card_game {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.card_area {
+  border-radius: 10px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.card_area > .title {
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 100%;
+  height: 17%;
+  font-size: 2.4rem;
+  font-weight: 100;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+.card_area > .txt {
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(.2rem, 1vw, .5rem);
+  width: 100%;
+  height: 8%;
+  display: flex;
+  position: absolute;
+  top: 19%;
+}
+
+.card_area > .txt.on {
+  height: 14%;
+}
+
+.card_area > .txt div {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+}
+
+.card_area > .txt.on div {
+  color: #5f88c6;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.fix_txt {
+  flex-direction: column;
+  gap: clamp(.2rem, 1vw, .5rem);
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: -6rem;
+}
+
+.fix_txt > div {
+  color: #fff;
+  font-family: Noto Sans KR;
+  font-size: 1.4rem;
+}
+
+.game_board {
+  opacity: 1;
+  border-radius: 1rem;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(3, 33.33%);
+  align-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 30rem;
+  height: 50%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  display: grid;
+  position: absolute;
+  top: 30%;
+  overflow: hidden;
+}
+
+.card {
+  cursor: pointer;
+  width: 100%;
+  height: 95%;
+  position: relative;
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s;
+  position: absolute;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  background: url("card.00558d20.png") center / contain no-repeat;
+}
+
+.card.flipped .card-front {
+  transform: rotateY(0);
+}
+
+.card.flipped .card-back {
+  transform: rotateY(-180deg);
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: .5s shake;
+}
+
+#cardgame_popup {
+  opacity: 0;
+  pointer-events: none;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 75%;
+  min-width: 22rem;
+  height: clamp(20%, 116vw, 65%);
+  max-height: clamp(15rem, 116vw, 30rem);
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  display: flex;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#cardgame_popup.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ceramics_img {
+  background: url("ceramics.7949202c.png") center / contain no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+}
+
+.ceramics_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#cardgame_popup .complete_button {
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  width: 10rem;
+  height: 4rem;
+  font-family: ChosunCentennial;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /*# sourceMappingURL=index.e9a92ad8.css.map */
