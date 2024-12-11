@@ -63,6 +63,21 @@
   .fix_txt > div {
     font-size: clamp(1rem, 3vw, 1.4rem);
   }
+  .conversion_img .balloon_img {
+    width: clamp(18rem, 60vw, 25rem);
+  }
+
+  .rabbit_img2 {
+    width: clamp(1rem, 8vw, 3rem);
+    /* height: 3rem; */
+    top: clamp(0.5rem, 4vw, 1.7rem);
+    /* left: clamp(1rem, 5vw, 2rem); */
+  }
+  .conversion_img .balloon_img > .txt {
+    font-size: clamp(0.8rem, 4vw, 1.6rem);
+    top: clamp(1.5rem, 6vw, 2.4rem);
+    left: clamp(5.5rem, 5vw, 6rem);
+  }
 }
 @media (max-width: 350px) {
   .click_btn {

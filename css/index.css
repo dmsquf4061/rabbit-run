@@ -838,7 +838,7 @@
   top: -3.5rem;
   font-family: "ChosunCentennial";
   cursor: pointer;
-  pointer-events: auto;
+  pointer-events: none;
   width: 12rem;
   height: 4rem;
 }
@@ -1136,14 +1136,15 @@
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
 .run_area > .txt.on {
-  height: 14%;
+  height: 12%;
 }
 .run_area > .txt div {
   font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
-.run_area > .txt.on div {
-  font-size: clamp(1.5rem, 4vw, 2rem);
+.run_area > .txt.on button {
+  font-size: 2rem;
   color: #5f88c6;
+  font-family: "ChosunCentennial";
 }
 #run_game {
   position: absolute;
@@ -1294,28 +1295,53 @@
   opacity: 1;
   pointer-events: auto;
 }
-.victory_img {
-  background: url(./img/zara4.png) center / contain no-repeat;
+.conversion_img {
   width: 100%;
   height: 100%;
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  ]:flex ;
+  position: relative;
 }
-.victory_img.on {
+.conversion_img.on {
   opacity: 1;
   pointer-events: auto;
 }
-.victory_img .complete_button {
-  font-size: 1.8rem;
-  color: #fff;
-  cursor: pointer;
+.conversion_img .balloon_img {
   position: absolute;
-  font-family: "ChosunCentennial";
-  top: 56%;
-  position: absolute;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 10rem;
-  height: 4rem;
+  /* width: clamp(20rem, 30vw, 25rem); */
+}
+.conversion_img .balloon_img > .txt {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 6rem;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.conversion_img .victory_img {
+  background: url(./img/zara4.png);
+  width: 100%;
+  height: 75%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+}
+.rabbit_img2 {
+  width: 3rem;
+  height: 3rem;
+  background: url(./img/rabbit_2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  position: absolute;
+  top: 1.7rem;
+  left: 2rem;
 }
 /*달리기게임 e*/

@@ -172,6 +172,9 @@ $(document).ready(function () {
     $(".sea_img").css({
       display: "none",
     });
+    $(".rabbit_turtle_img .balloon_img2 > .btn").css({
+      "pointer-events": "auto",
+    });
     $(".transition").css({
       display: "none",
     });

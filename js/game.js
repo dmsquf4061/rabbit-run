@@ -410,8 +410,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const rungamePopup = document.getElementById("rungame_popup");
   const runPath = document.querySelector(".run_path");
   const pungpungpungImg = document.querySelector(".pungpungpung_img");
+  const conversionImg = document.querySelector(".conversion_img");
   const victoryImg = document.querySelector(".victory_img");
   const runGame = document.getElementById("run_game");
+  const txtDiv = document.querySelector(".run_area .txt");
 
   let currentPosition = 0;
   const maxPosition = 5;
@@ -444,9 +446,11 @@ document.addEventListener("DOMContentLoaded", function () {
       climbButton.disabled = true;
       rungamePopup.style.opacity = "1";
       pungpungpungImg.classList.add("on");
+      txtDiv.classList.add("on");
+      txtDiv.innerHTML = "<button>Click!</button>";
       runGame.style.opacity = "0";
       setTimeout(() => {
-        victoryImg.classList.add("on");
+        conversionImg.classList.add("on");
       }, 500);
 
       updateCharacterPosition();
