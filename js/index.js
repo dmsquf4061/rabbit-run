@@ -167,7 +167,7 @@ $(document).ready(function () {
     $(".shore_img").css({
       opacity: "1",
     });
-    await delay(1200);
+    await delay(1600);
     $(".rabbit_turtle_img").addClass("on");
     $(".sea_img").css({
       display: "none",
@@ -178,12 +178,28 @@ $(document).ready(function () {
   };
 
   const handleShoreBtn = async () => {
+    $(".underwater_palace_img").css({
+      display: "none",
+    });
+    $(".fix_txt").css({
+      display: "none",
+    });
+    $(".fill_img").css({
+      display: "flex",
+    });
+    $(".run_path").css({
+      display: "none",
+    });
     $(".shore_img").css({
       filter: "blur(1rem)",
       "clip-path": "inset(0rem)",
     });
-    $(".game_container").css({
+    $(".game_page").css({
       opacity: "1",
+      "pointer-events": "auto",
+    });
+    $(".run_game").css({
+      display: "block",
     });
   };
   // 초기화 및 이벤트 바인딩

@@ -1083,7 +1083,7 @@
   height: 100%;
 }
 
-.path {
+.game_container .path {
   flex-direction: column;
   align-items: center;
   display: flex;

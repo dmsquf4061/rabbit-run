@@ -315,6 +315,44 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // 게임 시작
     initializeGame();
+    //달리기 게임
+    const character = document.querySelector(".character");
+    const climbButton = document.getElementById("climbButton");
+    const goalAlert = document.getElementById("goalAlert");
+    const path = document.querySelector(".path");
+    let currentPosition = 0;
+    const maxPosition = 5;
+    function createVerticalPath() {
+        for(let i = 0; i <= maxPosition; i++){
+            const segment = document.createElement("div");
+            segment.classList.add("path-segment");
+            segment.style.bottom = `${i / maxPosition * 100}%`;
+            path.appendChild(segment);
+        }
+    }
+    function updateCharacterPosition() {
+        const progress = Math.min(currentPosition / maxPosition, 1);
+        const bottomOffset = 10;
+        const bottomPosition = `calc(${progress * 100}% - ${character.offsetHeight / 2}px + ${bottomOffset}px)`;
+        character.style.bottom = bottomPosition;
+    }
+    function checkGoal() {
+        if (currentPosition === maxPosition) {
+            climbButton.disabled = true;
+            goalAlert.style.display = "block";
+            updateCharacterPosition();
+        }
+    }
+    climbButton.addEventListener("click", ()=>{
+        if (currentPosition < maxPosition) {
+            currentPosition++;
+            updateCharacterPosition();
+            checkGoal();
+        }
+    });
+    // 초기 설정
+    createVerticalPath();
+    updateCharacterPosition();
 });
 
 //# sourceMappingURL=index.fb67f16b.js.map

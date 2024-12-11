@@ -403,4 +403,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 게임 시작
   initializeGame();
+
+  //달리기 게임
+  const character = document.querySelector(".character");
+  const climbButton = document.getElementById("climbButton");
+  const goalAlert = document.getElementById("goalAlert");
+  const runPath = document.querySelector(".run_path");
+
+  let currentPosition = 0;
+  const maxPosition = 5;
+
+  function createVerticalPath() {
+    for (let i = 0; i <= maxPosition; i++) {
+      const segment = document.createElement("div");
+      segment.classList.add("path-segment");
+      segment.style.left = `${(i / maxPosition) * 100}%`;
+      runPath.appendChild(segment);
+    }
+  }
+
+  let currentOffset = -120; // 초기 위치를 -120%로 설정
+
+  function updateCharacterPosition() {
+    if (currentOffset < 0) {
+      // currentOffset이 0%보다 작을 때만 실행
+      currentOffset += 20;
+      if (currentOffset > 0) {
+        // 0%를 넘지 않도록 제한
+        currentOffset = 0;
+      }
+      character.style.left = `${currentOffset}%`;
+    }
+  }
+
+  function checkGoal() {
+    if (currentPosition === maxPosition) {
+      climbButton.disabled = true;
+      goalAlert.style.display = "block";
+      updateCharacterPosition();
+    }
+  }
+
+  climbButton.addEventListener("click", () => {
+    if (currentPosition < maxPosition) {
+      currentPosition++;
+      updateCharacterPosition();
+      checkGoal();
+    }
+  });
+
+  // 초기 설정
+  createVerticalPath();
+  updateCharacterPosition();
 });

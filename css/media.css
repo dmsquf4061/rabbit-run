@@ -8,10 +8,19 @@
     bottom: clamp(18rem, 60vw, 60rem);
   }
   .shiny_img {
-    bottom: clamp(20rem, 54vw, 44rem);
+    bottom: clamp(15rem, 48vw, 44rem);
   }
   .piggyback_img {
     bottom: clamp(20rem, 54vw, 44rem);
+  }
+  .fill_img {
+    /* width: 80%; */
+  }
+  .background {
+    /* width: 80%; */
+  }
+  .fill_box {
+    /* width: 23rem; */
   }
 }
 
@@ -25,10 +34,26 @@
     top: clamp(53%, 40vw, 55%);
   }
   .shiny_img {
-    bottom: clamp(5rem, 52vw, 36rem);
+    bottom: clamp(5rem, 48vw, 36rem);
   }
   .piggyback_img {
     bottom: clamp(5rem, 47vw, 44rem);
+  }
+  .rabbit_turtle_img .balloon_img1 {
+    transform: inherit;
+  }
+  .rabbit_turtle_img.on .balloon_img2 {
+    transform: inherit;
+    top: -18%;
+  }
+  .fill_img {
+    /* width: 80%; */
+  }
+  .background {
+    width: 80%;
+  }
+  .fill_box {
+    width: 45.5%;
   }
 }
 @media (max-width: 425px) {
@@ -39,8 +64,15 @@
     font-size: clamp(1rem, 3vw, 1.4rem);
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 350px) {
   .click_btn {
+  }
+  .shiny_img {
+    bottom: clamp(0rem, 42vw, 36rem);
+  }
+  .rabbit_turtle_img.on .balloon_img2 {
+    transform: inherit;
+    top: -10%;
   }
 }
 @media (max-height: 809px) {
@@ -55,5 +87,14 @@
   }
   .puzzle_area > .txt.on {
     height: 16%;
+  }
+
+  .fill_img {
+    bottom: 3%;
+    height: 5.5rem;
+  }
+  .fill_box {
+    height: 4rem;
+    top: 0.8rem;
   }
 }

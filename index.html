@@ -199,31 +199,18 @@
         </div>
         <!--카드게임 e-->
         <!--달리기게임 s-->
-        <div class="game_container">
-          <div class="game-area">
-            <div class="background"></div>
-            <div class="path"></div>
-            <div class="character-container">
-              <div class="character"></div>
+        <div class="run_game">
+          <div class="run_area">
+            <h3 class="title">달려라 토선생</h3>
+            <div class="txt">
+              <div>마지막이오! 자라를 따돌리고</div>
+              <div>무사히 도망칠 수 있도록 달려봅시다!</div>
+            </div>
+            <div id="run_game">
+              <div class="run_img"></div>
+              <button id="climbButton" class="climb-button">연타하기</button>
             </div>
           </div>
-          <button id="climbButton" class="climb-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="chevron-up"
-            >
-              <polyline points="18 15 12 9 6 15"></polyline>
-            </svg>
-            올라가기
-          </button>
           <div id="goalAlert" class="goal-alert" style="display: none">
             <h3>축하합니다!</h3>
             <p>정상에 도달했습니다! 목표를 달성하셨습니다.</p>
@@ -234,6 +221,13 @@
           <div>토끼런의 다양한 오브제들은 국가유산청에서</div>
           <div>제공하는 국가유산 자료를 기반으로 제작되었습니다.</div>
         </div>
+      </div>
+      <div class="fill_img">
+        <div class="background"></div>
+        <div class="fill_box">
+          <div class="character"></div>
+        </div>
+        <div class="run_path"></div>
       </div>
     </section>
   </body>
