@@ -1,4 +1,4 @@
-/*스타트 페이지 s*/
+/* 스타트 페이지 s */
 .start_page {
   width: 100%;
   height: 100%;
@@ -234,9 +234,9 @@
     transform: translateY(0);
   }
 }
-/*스타트 페이지 e*/
+/* 스타트 페이지 e */
 
-/*메인 페이지 s*/
+/* 메인 페이지 s */
 .main_page {
   width: 100%;
   height: 100%;
@@ -352,9 +352,9 @@
   }
 }
 
-/*메인 페이지 e*/
+/* 메인 페이지 e */
 
-/*퍼즐게임 s*/
+/* 퍼즐게임 s */
 .game_page {
   position: absolute;
   top: 0;
@@ -531,9 +531,9 @@
   height: 4rem;
 }
 
-/*퍼즐게임 e*/
+/* 퍼즐게임 e */
 
-/*트랜지션 스토리 s*/
+/* 트랜지션 스토리 s */
 .go_page {
   width: 100%;
   height: 100%;
@@ -627,6 +627,7 @@
   display: none;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
+/* 바다 s */
 .sea_img {
   background: url(./img/sea.png);
   background-size: cover;
@@ -705,6 +706,8 @@
 .sea_img.on .propulsion_btn {
   display: none;
 }
+/* 바다 e */
+/* 육지 s */
 .shore_img {
   position: absolute;
   left: 0;
@@ -892,10 +895,22 @@
   position: absolute;
   bottom: -1%;
 }
-/*앞으로 가는 페이지 e*/
-/*트랜지션 스토리 e*/
+/* 육지 e */
+/* 도착 s */
+.thank_img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  background: linear-gradient(to top, #ffffff, #ddebff);
+}
+.thank_img.on {
+  opacity: 1;
+}
+/* 도착 e */
+/* 트랜지션 스토리 e */
 
-/*카드게임 s*/
+/* 카드게임 s */
 .card_game {
   display: none;
   width: 100%;
@@ -994,8 +1009,7 @@
 }
 
 .card-front {
-  /* 앞면 기본 색상 */
-  transform: rotateY(180deg); /* 뒤집히기 전에는 숨김 */
+  transform: rotateY(180deg);
 }
 
 .card-back {
@@ -1006,11 +1020,11 @@
 }
 
 .card.flipped .card-front {
-  transform: rotateY(0deg); /* 뒤집힌 상태에서 보임 */
+  transform: rotateY(0deg);
 }
 
 .card.flipped .card-back {
-  transform: rotateY(-180deg); /* 뒤집힌 상태에서 숨김 */
+  transform: rotateY(-180deg);
 }
 
 @keyframes shake {
@@ -1043,7 +1057,6 @@
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   opacity: 0;
   pointer-events: none;
-  /* background: url(./img/together.png) center / contain no-repeat; */
   flex-direction: column;
   place-content: center;
   align-items: center;
@@ -1093,8 +1106,8 @@
   height: 4rem;
   z-index: 10;
 }
-/*카드게임 e*/
-/*달리기게임 s*/
+/* 카드게임 e */
+/* 달리기게임 s */
 
 .run_game {
   border-radius: 10px;
@@ -1145,6 +1158,9 @@
   font-size: 2rem;
   color: #5f88c6;
   font-family: "ChosunCentennial";
+  cursor: pointer;
+  height: 4rem;
+  width: 10rem;
 }
 #run_game {
   position: absolute;
@@ -1227,6 +1243,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0.5rem;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
 .climb_button {
   background: url(./img/button.png);
@@ -1300,7 +1317,6 @@
   height: 100%;
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
-  ]:flex ;
   position: relative;
 }
 .conversion_img.on {
@@ -1344,4 +1360,9 @@
   top: 1.7rem;
   left: 2rem;
 }
-/*달리기게임 e*/
+/* 달리기게임 e */
+/* 통도사명부전 s */
+.heritage_popup {
+  opacity: 0;
+}
+/* 통도사명부전 e */

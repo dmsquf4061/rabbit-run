@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const txtDiv = document.querySelector(".run_area .txt");
 
   let currentPosition = 0;
-  const maxPosition = 5;
+  const maxPosition = 10;
 
   function createVerticalPath() {
     for (let i = 0; i <= maxPosition; i++) {
@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateCharacterPosition() {
     if (currentOffset < 0) {
       // currentOffset이 0%보다 작을 때만 실행
-      currentOffset += 20;
+      currentOffset += 10;
       if (currentOffset > 0) {
         // 0%를 넘지 않도록 제한
         currentOffset = 0;
@@ -447,7 +447,7 @@ document.addEventListener("DOMContentLoaded", function () {
       rungamePopup.style.opacity = "1";
       pungpungpungImg.classList.add("on");
       txtDiv.classList.add("on");
-      txtDiv.innerHTML = "<button>Click!</button>";
+      txtDiv.innerHTML = "<button class='thankspage_btn'>Click!</button>";
       runGame.style.opacity = "0";
       setTimeout(() => {
         conversionImg.classList.add("on");

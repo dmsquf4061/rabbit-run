@@ -205,6 +205,17 @@ $(document).ready(function () {
       display: "block",
     });
   };
+
+  const handleThanksPage = async () => {
+    $(".game_page").css({
+      opacity: "0",
+      "pointer-events": "none",
+    });
+    $(".main_page").css({
+      filter: "none",
+      "clip-path": "inset(0rem)",
+    });
+  };
   // 초기화 및 이벤트 바인딩
   animateSection1();
   $(".start_btn").on("click", handleStartClick);
@@ -213,4 +224,5 @@ $(document).ready(function () {
   $("#cardgame_popup .complete_button").on("click", handleCardComplete);
   $(".propulsion_btn").on("click", handleGameCard);
   $(".shore_img .btn").on("click", handleShoreBtn);
+  $(".thankspage_btn").on("click", handleThanksPage);
 });

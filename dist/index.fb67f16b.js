@@ -318,28 +318,44 @@ document.addEventListener("DOMContentLoaded", function() {
     //달리기 게임
     const character = document.querySelector(".character");
     const climbButton = document.getElementById("climbButton");
-    const goalAlert = document.getElementById("goalAlert");
-    const path = document.querySelector(".path");
+    const rungamePopup = document.getElementById("rungame_popup");
+    const runPath = document.querySelector(".run_path");
+    const pungpungpungImg = document.querySelector(".pungpungpung_img");
+    const conversionImg = document.querySelector(".conversion_img");
+    const victoryImg = document.querySelector(".victory_img");
+    const runGame = document.getElementById("run_game");
+    const txtDiv = document.querySelector(".run_area .txt");
     let currentPosition = 0;
-    const maxPosition = 5;
+    const maxPosition = 10;
     function createVerticalPath() {
         for(let i = 0; i <= maxPosition; i++){
             const segment = document.createElement("div");
-            segment.classList.add("path-segment");
-            segment.style.bottom = `${i / maxPosition * 100}%`;
-            path.appendChild(segment);
+            segment.classList.add("path_segment");
+            segment.style.left = `${i / maxPosition * 100}%`;
+            runPath.appendChild(segment);
         }
     }
+    let currentOffset = -120; // 초기 위치를 -120%로 설정
     function updateCharacterPosition() {
-        const progress = Math.min(currentPosition / maxPosition, 1);
-        const bottomOffset = 10;
-        const bottomPosition = `calc(${progress * 100}% - ${character.offsetHeight / 2}px + ${bottomOffset}px)`;
-        character.style.bottom = bottomPosition;
+        if (currentOffset < 0) {
+            // currentOffset이 0%보다 작을 때만 실행
+            currentOffset += 10;
+            if (currentOffset > 0) // 0%를 넘지 않도록 제한
+            currentOffset = 0;
+            character.style.left = `${currentOffset}%`;
+        }
     }
     function checkGoal() {
         if (currentPosition === maxPosition) {
             climbButton.disabled = true;
-            goalAlert.style.display = "block";
+            rungamePopup.style.opacity = "1";
+            pungpungpungImg.classList.add("on");
+            txtDiv.classList.add("on");
+            txtDiv.innerHTML = "<button class='thankspage_btn'>Click!</button>";
+            runGame.style.opacity = "0";
+            setTimeout(()=>{
+                conversionImg.classList.add("on");
+            }, 500);
             updateCharacterPosition();
         }
     }

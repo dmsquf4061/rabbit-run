@@ -7,7 +7,11 @@
     bottom: clamp(18rem, 60vw, 60rem);
   }
 
-  .shiny_img, .piggyback_img {
+  .shiny_img {
+    bottom: clamp(15rem, 48vw, 44rem);
+  }
+
+  .piggyback_img {
     bottom: clamp(20rem, 54vw, 44rem);
   }
 }
@@ -22,11 +26,28 @@
   }
 
   .shiny_img {
-    bottom: clamp(5rem, 52vw, 36rem);
+    bottom: clamp(5rem, 48vw, 36rem);
   }
 
   .piggyback_img {
     bottom: clamp(5rem, 47vw, 44rem);
+  }
+
+  .rabbit_turtle_img .balloon_img1 {
+    transform: inherit;
+  }
+
+  .rabbit_turtle_img.on .balloon_img2 {
+    transform: inherit;
+    top: -18%;
+  }
+
+  .background {
+    width: 80%;
+  }
+
+  .fill_box {
+    width: 45.5%;
   }
 }
 
@@ -37,6 +58,32 @@
 
   .fix_txt > div {
     font-size: clamp(1rem, 3vw, 1.4rem);
+  }
+
+  .conversion_img .balloon_img {
+    width: clamp(18rem, 60vw, 25rem);
+  }
+
+  .rabbit_img2 {
+    width: clamp(1rem, 8vw, 3rem);
+    top: clamp(.5rem, 4vw, 1.7rem);
+  }
+
+  .conversion_img .balloon_img > .txt {
+    font-size: clamp(.8rem, 4vw, 1.6rem);
+    top: clamp(1.5rem, 6vw, 2.4rem);
+    left: clamp(5.5rem, 5vw, 6rem);
+  }
+}
+
+@media (width <= 350px) {
+  .shiny_img {
+    bottom: clamp(0rem, 42vw, 36rem);
+  }
+
+  .rabbit_turtle_img.on .balloon_img2 {
+    transform: inherit;
+    top: -10%;
   }
 }
 
@@ -52,6 +99,16 @@
 
   .puzzle_area > .txt.on {
     height: 16%;
+  }
+
+  .fill_img {
+    height: 5.5rem;
+    bottom: 3%;
+  }
+
+  .fill_box {
+    height: 4rem;
+    top: .8rem;
   }
 }
 /*# sourceMappingURL=index.2ca6ad9c.css.map */

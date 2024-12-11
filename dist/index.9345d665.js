@@ -179,22 +179,51 @@ $(document).ready(function() {
         $(".shore_img").css({
             opacity: "1"
         });
-        await delay(1200);
+        await delay(1600);
         $(".rabbit_turtle_img").addClass("on");
         $(".sea_img").css({
             display: "none"
+        });
+        $(".rabbit_turtle_img .balloon_img2 > .btn").css({
+            "pointer-events": "auto"
         });
         $(".transition").css({
             display: "none"
         });
     };
     const handleShoreBtn = async ()=>{
+        $(".underwater_palace_img").css({
+            display: "none"
+        });
+        $(".fix_txt").css({
+            display: "none"
+        });
+        $(".fill_img").css({
+            display: "flex"
+        });
+        $(".run_path").css({
+            display: "none"
+        });
         $(".shore_img").css({
             filter: "blur(1rem)",
             "clip-path": "inset(0rem)"
         });
-        $(".game_container").css({
-            opacity: "1"
+        $(".game_page").css({
+            opacity: "1",
+            "pointer-events": "auto"
+        });
+        $(".run_game").css({
+            display: "block"
+        });
+    };
+    const handleThanksPage = async ()=>{
+        $(".game_page").css({
+            opacity: "0",
+            "pointer-events": "none"
+        });
+        $(".main_page").css({
+            filter: "none",
+            "clip-path": "inset(0rem)"
         });
     };
     // 초기화 및 이벤트 바인딩
@@ -205,6 +234,7 @@ $(document).ready(function() {
     $("#cardgame_popup .complete_button").on("click", handleCardComplete);
     $(".propulsion_btn").on("click", handleGameCard);
     $(".shore_img .btn").on("click", handleShoreBtn);
+    $(".thankspage_btn").on("click", handleThanksPage);
 });
 
 //# sourceMappingURL=index.9345d665.js.map

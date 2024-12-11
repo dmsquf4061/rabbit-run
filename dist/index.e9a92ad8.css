@@ -769,6 +769,7 @@
 
 .rabbit_turtle_img .balloon_img2 {
   opacity: 0;
+  pointer-events: none;
   background: url("balloon.713ea536.png") 0 0 / contain no-repeat;
   width: 22rem;
   height: 7.5rem;
@@ -785,12 +786,13 @@
 
 .rabbit_turtle_img.on .balloon_img2 {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .rabbit_turtle_img .balloon_img2 > .btn {
   color: #5f88c6;
   cursor: pointer;
-  pointer-events: auto;
+  pointer-events: none;
   width: 12rem;
   height: 4rem;
   font-family: ChosunCentennial;
@@ -849,6 +851,18 @@
   animation: 4s infinite wave04;
   position: absolute;
   bottom: -1%;
+}
+
+.thank_img {
+  opacity: 0;
+  background: linear-gradient(to top, #fff, #ddebff);
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+}
+
+.thank_img.on {
+  opacity: 1;
 }
 
 .card_game {
@@ -1061,26 +1075,99 @@
   transform: translateX(-50%);
 }
 
-.game_container {
-  opacity: 0;
-  flex-direction: column;
-  align-items: center;
+.run_game {
+  border-radius: 10px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.run_area {
+  border-radius: 10px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   display: flex;
 }
 
-.game-area {
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  width: 320px;
-  height: 480px;
-  position: relative;
-  overflow: hidden;
+.run_area > .title {
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 100%;
+  height: 17%;
+  font-size: 2.4rem;
+  font-weight: 100;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+.run_area > .txt {
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(.2rem, 1vw, .5rem);
+  width: 100%;
+  height: 8%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  display: flex;
+  position: absolute;
+  top: 19%;
+}
+
+.run_area > .txt.on {
+  height: 12%;
+}
+
+.run_area > .txt div {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+}
+
+.run_area > .txt.on button {
+  color: #5f88c6;
+  cursor: pointer;
+  width: 10rem;
+  height: 4rem;
+  font-family: ChosunCentennial;
+  font-size: 2rem;
+}
+
+#run_game {
+  aspect-ratio: 1;
+  opacity: 1;
+  border-radius: 1rem;
+  width: 80%;
+  max-width: 30rem;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+  top: 30%;
+}
+
+.fill_img {
+  justify-content: center;
+  width: 100%;
+  height: 6.5rem;
+  display: none;
+  position: absolute;
+  bottom: 5%;
+}
+
+.run_img {
+  background: url("runrunrun.606e4ac9.gif") 0 0 / contain no-repeat;
+  width: 100%;
+  height: 50%;
 }
 
 .background {
-  object-fit: cover;
+  z-index: 1;
+  background: url("bar.e9bd6636.png") center / contain no-repeat;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
+  display: flex;
+  position: absolute;
 }
 
 .game_container .path {
@@ -1091,74 +1178,149 @@
   inset: 0;
 }
 
-.path-segment {
+.path_segment {
   background-color: #ffff0080;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   position: absolute;
-  left: 50%;
+  left: 0;
   transform: translate(-50%, 50%);
 }
 
-.path-segment:last-child {
+.path_segment:last-child {
   background-color: #ff000080;
   width: 15px;
   height: 15px;
 }
 
-.character {
-  z-index: 10;
-  background: #ddd;
-  width: 80px;
-  height: 80px;
-  transition: bottom .5s ease-in-out;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.fill_box {
+  border-radius: 1rem;
+  width: 23rem;
+  height: 4.5rem;
+  position: relative;
+  top: 1rem;
+  overflow: hidden;
 }
 
-.climb-button {
+.character {
+  background: url("bar_color.8cf0ebe4.png") center / contain no-repeat;
+  border-radius: .5rem;
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
+}
+
+.climb_button {
   color: #fff;
   cursor: pointer;
-  background-color: #3b82f6;
+  background: url("button.009b5cb2.png") center / contain no-repeat;
   border: none;
   border-radius: 4px;
-  align-items: center;
-  margin-top: 16px;
-  padding: 8px 16px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 38%;
+  padding: 11% 0;
+  font-family: ChosunCentennial;
+  font-size: 2.2rem;
   display: flex;
 }
 
-.climb-button:hover {
-  background-color: #2563eb;
-}
-
-.climb-button:disabled {
-  cursor: not-allowed;
-  background-color: #9ca3af;
+.climb_button:hover {
+  background: url("button_hover.a0ca3ad4.png") bottom / contain no-repeat;
+  align-items: flex-end;
+  width: 80%;
+  padding: 16% 0;
+  display: flex;
 }
 
 .chevron-up {
   margin-right: 8px;
 }
 
-.goal-alert {
-  text-align: center;
-  background-color: #d1fae5;
-  border: 1px solid #34d399;
-  border-radius: 4px;
-  margin-top: 16px;
-  padding: 16px;
+#rungame_popup {
+  opacity: 0;
+  pointer-events: none;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 75%;
+  min-width: 22rem;
+  height: clamp(20%, 116vw, 65%);
+  max-height: clamp(15rem, 116vw, 30rem);
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  display: flex;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.goal-alert h3 {
-  color: #065f46;
-  margin-top: 0;
+.pungpungpung_img {
+  opacity: 0;
+  background: url("pungpungpung.6f6e30ff.gif") center / contain no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: absolute;
 }
 
-.goal-alert p {
-  color: #047857;
-  margin-bottom: 0;
+.pungpungpung_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.conversion_img {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
+  position: relative;
+}
+
+.conversion_img.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.conversion_img .balloon_img {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.conversion_img .balloon_img > .txt {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 6rem;
+}
+
+.conversion_img .victory_img {
+  background: url("zara4.83b7934a.png") center / contain no-repeat;
+  width: 100%;
+  height: 75%;
+  position: absolute;
+  bottom: 0;
+}
+
+.rabbit_img2 {
+  background: url("rabbit_2.887d7091.png") 0 0 / contain no-repeat;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  position: absolute;
+  top: 1.7rem;
+  left: 2rem;
+}
+
+.heritage_popup {
+  opacity: 0;
 }
 /*# sourceMappingURL=index.e9a92ad8.css.map */
