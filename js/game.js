@@ -407,8 +407,11 @@ document.addEventListener("DOMContentLoaded", function () {
   //달리기 게임
   const character = document.querySelector(".character");
   const climbButton = document.getElementById("climbButton");
-  const goalAlert = document.getElementById("goalAlert");
+  const rungamePopup = document.getElementById("rungame_popup");
   const runPath = document.querySelector(".run_path");
+  const pungpungpungImg = document.querySelector(".pungpungpung_img");
+  const victoryImg = document.querySelector(".victory_img");
+  const runGame = document.getElementById("run_game");
 
   let currentPosition = 0;
   const maxPosition = 5;
@@ -416,7 +419,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function createVerticalPath() {
     for (let i = 0; i <= maxPosition; i++) {
       const segment = document.createElement("div");
-      segment.classList.add("path-segment");
+      segment.classList.add("path_segment");
       segment.style.left = `${(i / maxPosition) * 100}%`;
       runPath.appendChild(segment);
     }
@@ -439,8 +442,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkGoal() {
     if (currentPosition === maxPosition) {
       climbButton.disabled = true;
+      rungamePopup.style.opacity = "1";
+      pungpungpungImg.classList.add("on");
+      runGame.style.opacity = "0";
+      setTimeout(() => {
+        victoryImg.classList.add("on");
+      }, 500);
 
-      goalAlert.style.display = "block";
       updateCharacterPosition();
     }
   }
