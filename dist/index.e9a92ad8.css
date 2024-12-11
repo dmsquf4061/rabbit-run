@@ -47,7 +47,7 @@
 }
 
 .start_page .rabbit_img {
-  background: url("css/img/main_motion.gif") center / contain no-repeat;
+  background: url("main_motion.0be38c30.gif") center / contain no-repeat;
   width: clamp(30rem, 15vw, 40rem);
   height: clamp(30rem, 15vw, 40rem);
   margin: .5rem 0 0;
@@ -309,6 +309,7 @@
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000;
   font-size: 1.6rem;
   position: absolute;
   top: 4.4rem;
@@ -647,7 +648,7 @@
   transition: all 2s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
   position: absolute;
-  bottom: -35%;
+  bottom: -50%;
   left: 50%;
   transform: translateX(-50%);
 }

@@ -314,6 +314,7 @@
   text-rendering: geometricPrecision; /* 최대 정밀도 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000;
 }
 .terrapin_img1 {
   width: 3rem;
@@ -665,7 +666,7 @@
   transform: translateX(-50%);
   transform-origin: left bottom;
   left: 50%;
-  bottom: -35%;
+  bottom: -50%;
   display: flex;
   flex-direction: column;
   align-content: center;
