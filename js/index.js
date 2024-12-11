@@ -228,7 +228,7 @@ $(document).ready(function () {
     $(".thank_img").css({
       opacity: "1",
     });
-    await delay(2000);
+    await delay(1500);
     $(".serai_img1").css({
       opacity: "0",
       display: "none",
@@ -256,3 +256,42 @@ $(document).ready(function () {
   $(".shore_img .btn").on("click", handleShoreBtn);
   $(".run_game .txt").on("click", handleRunBtn);
 });
+
+function last() {
+  document.addEventListener("click", async function (event) {
+    // 공유 버튼 클릭
+    if (event.target.classList.contains("share")) {
+      const shareData = {
+        title: "토끼런",
+        text: "용궁을 탈출할 기회를 얻은 토선생, 토선생이 무사히 도망칠 수 있도록 도와주시오!",
+        url: window.location.href,
+      };
+
+      // 모바일 기기 체크
+      const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          console.log("Share failed:", err);
+        }
+      } else if (isMobile) {
+        // 모바일인 경우 기본 공유 인텐트 사용
+        const shareText = `${shareData.text}\n${shareData.url}`;
+        window.location.href = `sms:?body=${encodeURIComponent(shareText)}`;
+      } else {
+        // 데스크톱에서는 클립보드에 복사
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          alert("링크가 복사되었습니다!");
+        } catch (err) {
+          alert("죄송합니다. 이 브라우저에서는 공유하기가 지원되지 않습니다.");
+        }
+      }
+    }
+  });
+}
