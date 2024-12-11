@@ -447,7 +447,7 @@ document.addEventListener("DOMContentLoaded", function () {
       rungamePopup.style.opacity = "1";
       pungpungpungImg.classList.add("on");
       txtDiv.classList.add("on");
-      txtDiv.innerHTML = "<button class='thankspage_btn'>Click!</button>";
+      txtDiv.innerHTML = "<button>Click!</button>";
       runGame.style.opacity = "0";
       setTimeout(() => {
         conversionImg.classList.add("on");

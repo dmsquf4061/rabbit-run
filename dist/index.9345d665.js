@@ -216,14 +216,43 @@ $(document).ready(function() {
             display: "block"
         });
     };
-    const handleThanksPage = async ()=>{
+    const handleRunBtn = async ()=>{
+        $(".run_game").css({
+            display: "none"
+        });
+        $(".fill_img").css({
+            display: "none"
+        });
         $(".game_page").css({
             opacity: "0",
             "pointer-events": "none"
         });
-        $(".main_page").css({
+        $(".go_page").css({
+            "pointer-events": "auto"
+        });
+        $(".shore_img").css({
+            opacity: "0",
             filter: "none",
             "clip-path": "inset(0rem)"
+        });
+        $(".thank_img").css({
+            opacity: "1"
+        });
+        await delay(2000);
+        $(".serai_img1").css({
+            opacity: "0",
+            display: "none"
+        });
+        $(".serai_img2").css({
+            opacity: "1"
+        });
+        await delay(2000);
+        $(".serai_img2").css({
+            opacity: "0",
+            display: "none"
+        });
+        $(".serai_img3").css({
+            opacity: "1"
         });
     };
     // 초기화 및 이벤트 바인딩
@@ -234,7 +263,7 @@ $(document).ready(function() {
     $("#cardgame_popup .complete_button").on("click", handleCardComplete);
     $(".propulsion_btn").on("click", handleGameCard);
     $(".shore_img .btn").on("click", handleShoreBtn);
-    $(".thankspage_btn").on("click", handleThanksPage);
+    $(".run_game .txt").on("click", handleRunBtn);
 });
 
 //# sourceMappingURL=index.9345d665.js.map
