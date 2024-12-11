@@ -268,7 +268,7 @@ $(document).ready(function() {
 function last() {
     document.addEventListener("click", async function(event) {
         // 공유 버튼 클릭
-        if (event.target.classList.contains("share")) {
+        if (event.target.closest(".share")) {
             const shareData = {
                 title: "\uD1A0\uB07C\uB7F0",
                 text: "\uC6A9\uAD81\uC744 \uD0C8\uCD9C\uD560 \uAE30\uD68C\uB97C \uC5BB\uC740 \uD1A0\uC120\uC0DD, \uD1A0\uC120\uC0DD\uC774 \uBB34\uC0AC\uD788 \uB3C4\uB9DD\uCE60 \uC218 \uC788\uB3C4\uB85D \uB3C4\uC640\uC8FC\uC2DC\uC624!",

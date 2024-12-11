@@ -260,7 +260,7 @@ $(document).ready(function () {
 function last() {
   document.addEventListener("click", async function (event) {
     // 공유 버튼 클릭
-    if (event.target.classList.contains("share")) {
+    if (event.target.closest(".share")) {
       const shareData = {
         title: "토끼런",
         text: "용궁을 탈출할 기회를 얻은 토선생, 토선생이 무사히 도망칠 수 있도록 도와주시오!",
