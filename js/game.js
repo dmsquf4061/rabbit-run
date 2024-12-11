@@ -439,6 +439,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkGoal() {
     if (currentPosition === maxPosition) {
       climbButton.disabled = true;
+
       goalAlert.style.display = "block";
       updateCharacterPosition();
     }

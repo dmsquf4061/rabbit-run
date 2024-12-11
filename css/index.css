@@ -1245,7 +1245,9 @@
   justify-content: center;
   font-family: "ChosunCentennial";
   padding: 11% 0;
+  transition: 0.3s;
 }
+
 .climb-button:hover {
   background: url(./img/button_hover.png);
   background-size: contain;
