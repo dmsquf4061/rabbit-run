@@ -1,9 +1,7 @@
 @font-face {
   font-family: "ChosunCentennial";
-  src: url("https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ChosunCentennial.woff2")
-      format("woff2"),
-    url("https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ChosunCentennial.woff")
-      format("woff");
+  src: url("/fonts/ChosunCentennial.woff2") format("woff2"),
+    url("/fonts/ChosunCentennial.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
