@@ -1670,7 +1670,7 @@
   width: 80%;
   height: 100%;
   /* overflow: hidden; */
-  bottom: -5rem;
+  bottom: -3rem;
   pointer-events: none; /* 클릭 방지 */
   left: 50%;
   transform: translateX(-50%);
@@ -1681,7 +1681,7 @@
   width: 80%;
   height: 100%;
   /* overflow: hidden; */
-  bottom: -11rem;
+  bottom: -5rem;
   pointer-events: none; /* 클릭 방지 */
   left: 50%;
   transform: translateX(-50%);
@@ -1706,7 +1706,7 @@
   border-radius: 50%;
   filter: blur(1px);
   animation: fall var(--fall-duration, 5s) infinite linear;
-  box-shadow: 0 0 15px 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes fall {
