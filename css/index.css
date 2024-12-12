@@ -787,7 +787,7 @@
   width: 92%;
   height: 24rem;
   position: absolute;
-  bottom: 28%;
+  bottom: 22%;
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
@@ -1016,7 +1016,7 @@
   animation: wave01 4s infinite;
   position: absolute;
   left: -5rem;
-  bottom: -1rem;
+  bottom: -4rem;
 }
 
 .thank_img .water_img > .wave02 {
@@ -1027,7 +1027,7 @@
   animation: wave02 4s infinite;
   position: absolute;
   right: -5rem;
-  bottom: -1rem;
+  bottom: -4rem;
 }
 /* 도착 e */
 /* 트랜지션 스토리 e */
