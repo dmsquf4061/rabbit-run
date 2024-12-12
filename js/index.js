@@ -1,6 +1,7 @@
 $(document).ready(function () {
   // 딜레이 함수 정의
   const delay = (time) => new Promise((resolve) => setTimeout(resolve, time));
+  console.log(getComputedStyle(document.body).fontFamily);
 
   // 섹션 1 애니메이션 실행
   const animateSection1 = async () => {
