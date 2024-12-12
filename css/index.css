@@ -1693,7 +1693,7 @@
   width: 70%;
   height: 100%;
   /* overflow: hidden; */
-  bottom: -15rem;
+  bottom: -10rem;
   pointer-events: none; /* 클릭 방지 */
   left: 50%;
   transform: translateX(-50%);
