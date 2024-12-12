@@ -109,5 +109,5 @@ body {
   max-width: 88.5rem;
   min-height: 60rem;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
-  /* min-width: 300px; */
+  touch-action: manipulation;
 }

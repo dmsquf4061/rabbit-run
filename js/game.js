@@ -468,4 +468,33 @@ document.addEventListener("DOMContentLoaded", function () {
   // 초기 설정
   createVerticalPath();
   updateCharacterPosition();
+
+  const starsContainer1 = document.querySelector(".stars_container1");
+  const starsContainer2 = document.querySelector(".stars_container2");
+  const starsContainer3 = document.querySelector(".stars_container3");
+  const starCount = 10; // 원하는 별 개수
+
+  for (let i = 0; i < starCount; i++) {
+    // Create a new star for each container
+    const star1 = document.createElement("div");
+    star1.classList.add("star");
+
+    // Set random size, position, and duration for star1
+    const size = Math.random() * 5 + 1; // 1px ~ 6px
+    star1.style.width = `${size}px`;
+    star1.style.height = `${size}px`;
+    star1.style.left = `${Math.random() * 100}%`;
+    star1.style.top = `${Math.random() * 100}%`;
+    const duration = Math.random() * 5 + 3; // 3s ~ 8s
+    star1.style.setProperty("--fall-duration", `${duration}s`);
+
+    // Create a second star for the second container (clone of the first one)
+    const star2 = star1.cloneNode(true);
+    const star3 = star1.cloneNode(true);
+
+    // Append stars to respective containers
+    starsContainer1.appendChild(star1);
+    starsContainer2.appendChild(star2);
+    starsContainer3.appendChild(star3);
+  }
 });

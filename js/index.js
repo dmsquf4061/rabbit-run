@@ -64,6 +64,9 @@ $(document).ready(function () {
     $(".puzzle_game").css({
       display: "none",
     });
+    $(".stars_container1").css({
+      display: "block",
+    });
     await delay(500);
     $(".game_page").css({ display: "none" });
 
@@ -98,6 +101,9 @@ $(document).ready(function () {
       transition: "top 3s", // transition 속성에서 top만 애니메이션하도록 수정
     });
     $(".gopiggyback_img").css({
+      display: "block",
+    });
+    $(".stars_container2").css({
       display: "block",
     });
     $(".sea_img").css({
@@ -344,3 +350,6 @@ function last() {
     }
   });
 }
+document.addEventListener("dblclick", function (e) {
+  e.preventDefault(); // 더블 탭 확대 방지
+});

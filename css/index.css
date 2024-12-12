@@ -540,7 +540,7 @@
   height: 100%;
   position: absolute;
   pointer-events: none;
-  opacity: 0;
+  /* opacity: 0; */
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   z-index: 1;
 }
@@ -1661,3 +1661,67 @@
   cursor: pointer;
 }
 /* 솔브케이 e */
+/**/
+.sea_img.on .stars_container3 {
+  display: block;
+}
+.stars_container1 {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  /* overflow: hidden; */
+  bottom: -5rem;
+  pointer-events: none; /* 클릭 방지 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.stars_container2 {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  /* overflow: hidden; */
+  bottom: -11rem;
+  pointer-events: none; /* 클릭 방지 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.stars_container3 {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  /* overflow: hidden; */
+  bottom: -15rem;
+  pointer-events: none; /* 클릭 방지 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.star {
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: fall var(--fall-duration, 5s) infinite linear;
+  box-shadow: 0 0 15px 8px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
