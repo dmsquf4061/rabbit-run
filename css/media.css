@@ -41,10 +41,16 @@
   }
   .rabbit_turtle_img .balloon_img1 {
     transform: inherit;
+    background: url(./img/balloon1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .rabbit_turtle_img.on .balloon_img2 {
     transform: inherit;
     top: -18%;
+    background: url(./img/balloon2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .fill_img {
     /* width: 80%; */

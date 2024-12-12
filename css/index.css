@@ -805,7 +805,7 @@
   left: 50%;
   transform: translateX(-74%);
   width: 22rem;
-  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  /* transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01); */
   height: 7.5rem;
   background: url(./img/balloon.png);
   background-size: contain;
@@ -817,7 +817,7 @@
   transform: translateX(5%);
   width: 22rem;
   top: -1rem;
-  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  /* transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01); */
   height: 7.5rem;
   background: url(./img/balloon.png);
   background-size: contain;
