@@ -285,6 +285,22 @@ $(document).ready(function() {
             "clip-path": "inset(0rem)"
         });
     };
+    const handleCloseImg = async ()=>{
+        $(".game_page").css({
+            opacity: "0",
+            "pointer-events": "none"
+        });
+        $(".thank_img").css({
+            filter: "none",
+            "clip-path": "inset(0rem)"
+        });
+        $(".solvek_popup").css({
+            display: "none"
+        });
+        $(".heritage_popup").css({
+            display: "none"
+        });
+    };
     // 초기화 및 이벤트 바인딩
     animateSection1();
     $(".start_btn").on("click", handleStartClick);
@@ -297,6 +313,7 @@ $(document).ready(function() {
     $(".reset_btn").on("click", handleResetBtn);
     $(".heritage_click").on("click", handleHeritageClick);
     $(".solvek").on("click", handleSolvek);
+    $(".close_img").on("click", handleCloseImg);
 });
 function last() {
     document.addEventListener("click", async function(event) {

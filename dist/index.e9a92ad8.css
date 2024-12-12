@@ -301,7 +301,7 @@
 
 .balloon_img {
   background: url("balloon.713ea536.png") 0 0 / contain no-repeat;
-  width: 25rem;
+  width: 24rem;
   height: 7.5rem;
 }
 
@@ -313,7 +313,7 @@
   font-size: 1.6rem;
   position: absolute;
   top: 4.4rem;
-  left: 6rem;
+  left: 5.5rem;
 }
 
 .terrapin_img1 {
@@ -323,7 +323,7 @@
   margin: 0;
   position: absolute;
   top: 3.6rem;
-  left: 2rem;
+  left: 1.8rem;
 }
 
 .rabbit_img1 {
@@ -887,6 +887,7 @@
   width: 100%;
   height: 22%;
   min-height: 25rem;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
 }
 
 .serai_img > div {
@@ -896,6 +897,7 @@
   width: 80%;
   max-width: 40rem;
   height: 100%;
+  transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   position: relative;
 }
 
@@ -1462,7 +1464,7 @@
   border-radius: 10px;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: clamp(1.2rem, 2vw, 1.5rem);
   width: 100%;
   height: 70%;
   display: flex;
@@ -1489,12 +1491,14 @@
 }
 
 .heritage_area > .txt {
+  text-align: center;
+  word-break: keep-all;
   flex-direction: column;
   justify-content: flex-start;
   width: 70%;
   max-width: 25rem;
   height: 58%;
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-size: 1.4rem;
   line-height: 1.6;
   transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
@@ -1536,7 +1540,7 @@
   border-radius: 10px;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: 1.5rem;
   width: 100%;
   height: 70%;
   display: flex;
@@ -1563,12 +1567,14 @@
 }
 
 .solvek_area > .txt {
+  text-align: center;
+  word-break: keep-all;
   flex-direction: column;
   justify-content: flex-start;
   width: 70%;
   max-width: 25rem;
-  height: 45%;
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  height: 35%;
+  font-size: 1.4rem;
   line-height: 1.6;
   transition: all .5s cubic-bezier(.56, 0, .07, 1.01);
   display: flex;
@@ -1598,8 +1604,13 @@
 }
 
 .close_img {
+  cursor: pointer;
   background: url("X.7b76c9e0.png") 0 0 / contain no-repeat;
   width: 3.2rem;
   height: 3.2rem;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /*# sourceMappingURL=index.e9a92ad8.css.map */

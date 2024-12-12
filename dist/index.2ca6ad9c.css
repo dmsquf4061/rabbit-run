@@ -49,6 +49,10 @@
   .fill_box {
     width: 45.5%;
   }
+
+  .serai_img {
+    min-height: clamp(22%, 56vw, 24rem);
+  }
 }
 
 @media (width <= 425px) {
@@ -73,6 +77,20 @@
     font-size: clamp(.8rem, 4vw, 1.6rem);
     top: clamp(1.5rem, 6vw, 2.4rem);
     left: clamp(5.5rem, 5vw, 6rem);
+  }
+
+  .heritage_area {
+    gap: 0;
+    height: 80%;
+  }
+
+  .heritage_area > .txt {
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
+  }
+
+  .solvek_area > .txt {
+    height: 45%;
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
   }
 }
 

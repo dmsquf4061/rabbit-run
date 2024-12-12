@@ -300,7 +300,7 @@
   color: #5f88c6;
 }
 .balloon_img {
-  width: 25rem;
+  width: 24rem;
   height: 7.5rem;
   background: url(./img/balloon.png);
   background-size: contain;
@@ -310,7 +310,7 @@
   font-size: 1.6rem;
   position: absolute;
   top: 4.4rem;
-  left: 6rem;
+  left: 5.5rem;
   text-rendering: geometricPrecision; /* 최대 정밀도 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -325,7 +325,7 @@
   margin: 0;
   position: absolute;
   top: 3.6rem;
-  left: 2rem;
+  left: 1.8rem;
 }
 .rabbit_img1 {
   width: 3rem;
@@ -929,6 +929,7 @@
   width: 100%;
   height: 22%;
   min-height: 25rem;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
 }
 .serai_img > div {
   width: 80%;
@@ -938,6 +939,8 @@
   background-position: bottom;
   max-width: 40rem;
   position: relative;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  /* display: flex; */
 }
 .serai_img .balloon_img > .txt {
   top: 2.5rem;
@@ -1500,7 +1503,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: clamp(1.2rem, 2vw, 1.5rem);
 }
 .heritage_area > .title {
   flex-direction: column;
@@ -1536,8 +1539,10 @@
   transition: 0.3s;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   max-width: 25rem;
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-size: 1.4rem;
   /* 최신 표준 */
+  text-align: center;
+  word-break: keep-all;
 }
 .heritage_btn {
   width: 95%;
@@ -1580,7 +1585,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: 1.5rem;
 }
 .solvek_area > .title {
   flex-direction: column;
@@ -1611,13 +1616,15 @@
   width: 70%;
   /* position: absolute; */
   top: 40%;
-  height: 45%;
+  height: 35%;
   justify-content: flex-start;
   transition: 0.3s;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   max-width: 25rem;
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-size: 1.4rem;
   /* 최신 표준 */
+  text-align: center;
+  word-break: keep-all;
 }
 .solvek_btn {
   width: 95%;
@@ -1647,5 +1654,10 @@
   height: 3.2rem;
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+  cursor: pointer;
 }
 /* 솔브케이 e */
