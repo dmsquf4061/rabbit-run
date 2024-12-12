@@ -1495,6 +1495,7 @@
   display: none;
   align-items: center;
   align-content: center;
+  position: relative;
 }
 .heritage_area {
   border-radius: 10px;
@@ -1577,6 +1578,7 @@
   display: none;
   align-items: center;
   align-content: center;
+  position: relative;
 }
 .solvek_area {
   border-radius: 10px;
@@ -1657,7 +1659,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -3rem;
+  top: -30px;
   cursor: pointer;
 }
 /* 솔브케이 e */
