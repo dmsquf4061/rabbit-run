@@ -956,7 +956,7 @@
   opacity: 0;
   background: url(./img/arrive2.png);
 }
-.serai_img3 .btn {
+.serai_img3 .heritage_click {
   color: #5f88c6;
   font-size: 1.6rem;
   font-family: "ChosunCentennial";
@@ -966,6 +966,7 @@
   transform: translateX(-50%);
   width: 10rem;
   height: 4rem;
+  cursor: pointer;
 }
 .thank_img .button {
   display: flex;
@@ -1382,6 +1383,7 @@
   justify-content: center;
   font-family: "ChosunCentennial";
   padding: 11% 0;
+  touch-action: manipulation;
 }
 
 .climb_button:hover {
@@ -1482,6 +1484,168 @@
 /* 달리기게임 e */
 /* 통도사명부전 s */
 .heritage_popup {
-  opacity: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  display: none;
+  align-items: center;
+  align-content: center;
+}
+.heritage_area {
+  border-radius: 10px;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+.heritage_area > .title {
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 100%;
+  height: 17%;
+  font-size: 2.4rem;
+  font-weight: 100;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+.heritage_area > .img {
+  background: url(./img/heritage.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 65%;
+  height: 30%;
+  max-width: 24rem;
+}
+.heritage_area > .txt {
+  line-height: 1.6;
+  flex-direction: column;
+  /* gap: clamp(0.2rem, 1vw, 0.5rem); */
+  display: flex;
+  width: 70%;
+  /* position: absolute; */
+  top: 40%;
+  height: 58%;
+  justify-content: flex-start;
+  transition: 0.3s;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  max-width: 25rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  /* 최신 표준 */
+}
+.heritage_btn {
+  width: 95%;
+  height: 5rem;
+  border: none;
+  border-radius: 5rem;
+  background: #709ad6;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: "Noto Sans KR";
+  cursor: pointer;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 35rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6rem;
 }
 /* 통도사명부전 e */
+/* 솔브케이 s */
+.solvek_popup {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  display: none;
+  align-items: center;
+  align-content: center;
+}
+.solvek_area {
+  border-radius: 10px;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+.solvek_area > .title {
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 100%;
+  height: 17%;
+  font-size: 2.4rem;
+  font-weight: 100;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+.solvek_area > .img {
+  background: url(./img/solvek.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 65%;
+  height: 38%;
+  max-width: 24rem;
+}
+.solvek_area > .txt {
+  line-height: 1.6;
+  flex-direction: column;
+  /* gap: clamp(0.2rem, 1vw, 0.5rem); */
+  display: flex;
+  width: 70%;
+  /* position: absolute; */
+  top: 40%;
+  height: 45%;
+  justify-content: flex-start;
+  transition: 0.3s;
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  max-width: 25rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  /* 최신 표준 */
+}
+.solvek_btn {
+  width: 95%;
+  height: 5rem;
+  border: none;
+  border-radius: 5rem;
+  background: #709ad6;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: "Noto Sans KR";
+  cursor: pointer;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 35rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6rem;
+}
+.close_img {
+  background: url(./img/X.png);
+  width: 3.2rem;
+  height: 3.2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* 솔브케이 e */

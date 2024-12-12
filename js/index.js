@@ -224,6 +224,7 @@ $(document).ready(function () {
       opacity: "0",
       filter: "none",
       "clip-path": "inset(0rem)",
+      display: "none",
     });
     $(".thank_img").css({
       opacity: "1",
@@ -245,7 +246,35 @@ $(document).ready(function () {
       opacity: "1",
     });
   };
-
+  const handleResetBtn = async () => {
+    location.reload();
+  };
+  const handleHeritageClick = async () => {
+    $(".game_page").css({
+      opacity: "1",
+      "pointer-events": "auto",
+    });
+    $(".heritage_popup").css({
+      display: "block",
+    });
+    $(".thank_img").css({
+      filter: "blur(1rem)",
+      "clip-path": "inset(0rem)",
+    });
+  };
+  const handleSolvek = async () => {
+    $(".game_page").css({
+      opacity: "1",
+      "pointer-events": "auto",
+    });
+    $(".solvek_popup").css({
+      display: "block",
+    });
+    $(".thank_img").css({
+      filter: "blur(1rem)",
+      "clip-path": "inset(0rem)",
+    });
+  };
   // 초기화 및 이벤트 바인딩
   animateSection1();
   $(".start_btn").on("click", handleStartClick);
@@ -255,6 +284,9 @@ $(document).ready(function () {
   $(".propulsion_btn").on("click", handleGameCard);
   $(".shore_img .btn").on("click", handleShoreBtn);
   $(".run_game .txt").on("click", handleRunBtn);
+  $(".reset_btn").on("click", handleResetBtn);
+  $(".heritage_click").on("click", handleHeritageClick);
+  $(".solvek").on("click", handleSolvek);
 });
 
 function last() {
