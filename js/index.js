@@ -239,7 +239,6 @@ $(document).ready(function () {
     await delay(1500);
     $(".serai_img1").css({
       opacity: "0",
-      display: "none",
     });
     $(".serai_img2").css({
       opacity: "1",
@@ -247,11 +246,11 @@ $(document).ready(function () {
     await delay(2000);
     $(".serai_img2").css({
       opacity: "0",
-      display: "none",
     });
     $(".serai_img3").css({
       opacity: "1",
     });
+    $(".serai_rabbit").addClass("on");
   };
   const handleResetBtn = async () => {
     location.reload();

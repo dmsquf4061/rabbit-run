@@ -64,8 +64,9 @@
   .serai_img > div {
     /* height: clamp(75%, 55vw, 100%); */
   }
-  .serai_img {
-    min-height: clamp(22%, 56vw, 24rem);
+  .thankserai_img {
+    min-height: clamp(20rem, 50vw, 22rem);
+    height: clamp(18%, 50vw, 20%);
   }
 }
 @media (max-width: 425px) {
@@ -85,10 +86,21 @@
     top: clamp(0.5rem, 4vw, 1.7rem);
     /* left: clamp(1rem, 5vw, 2rem); */
   }
+  .climb_button {
+    padding: clamp(10%, 50vw, 11%) 0;
+  }
+  .climb_button:hover {
+    padding: clamp(0.5rem, 8vw, 7.5rem) 0;
+    align-items: flex-start;
+  }
   .conversion_img .balloon_img > .txt {
     font-size: clamp(0.8rem, 4vw, 1.6rem);
     top: clamp(1.5rem, 6vw, 2.4rem);
     left: clamp(5.5rem, 5vw, 6rem);
+  }
+  .thankserai_img {
+    min-height: clamp(18rem, 50vw, 22rem);
+    height: clamp(16%, 50vw, 18%);
   }
   .heritage_area {
     gap: 0;
@@ -110,9 +122,20 @@
   .shiny_img {
     bottom: clamp(0rem, 42vw, 36rem);
   }
+
+  .climb_button {
+    padding: clamp(6%, 52vw, 10%);
+  }
+  .climb_button:hover {
+    padding: clamp(0.5rem, 7vw, 3.5rem) 0;
+  }
   .rabbit_turtle_img.on .balloon_img2 {
     transform: inherit;
     top: -10%;
+  }
+  .thankserai_img {
+    min-height: clamp(16.5rem, 54vw, 18.5rem);
+    height: clamp(14%, 52vw, 18%);
   }
 }
 @media (max-height: 809px) {

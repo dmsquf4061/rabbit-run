@@ -305,6 +305,9 @@
   background: url(./img/balloon.png);
   background-size: contain;
   background-repeat: no-repeat;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
 .balloon_img > .txt {
   font-size: 1.6rem;
@@ -926,13 +929,19 @@
   top: 0;
   cursor: pointer;
 }
-.serai_img {
+.thankserai_img {
   width: 100%;
-  height: 22%;
-  min-height: 25rem;
+  height: 20%;
+  min-height: 23rem;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  position: relative;
 }
-.serai_img > div {
+.thankserai_img .balloon_img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.thankserai_img > .serai_img {
   width: 80%;
   height: 100%;
   background-size: contain;
@@ -940,25 +949,53 @@
   background-position: bottom;
   max-width: 40rem;
   position: relative;
-  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+  transition: all 0.5s;
   /* display: flex; */
-}
-.serai_img .balloon_img > .txt {
-  top: 2.5rem;
+  position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-.serai_img1 {
+.thankserai_img .balloon_img > .txt {
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+.serai_img {
   /* opacity: 0; */
   background: url(./img/arrive.png);
 }
+.serai_img1 {
+  opacity: 1;
+}
 .serai_img2 {
   opacity: 0;
-  background: url(./img/arrive.png);
 }
 .serai_img3 {
   opacity: 0;
+}
+.serai_rabbit {
+  /* opacity: 0; */
+  background: url(./img/arrive1.png);
+  /* opacity: 0; */
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  top: 1.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
+}
+.serai_rabbit.on {
   background: url(./img/arrive2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 .serai_img3 .heritage_click {
   color: #5f88c6;
