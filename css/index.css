@@ -935,6 +935,7 @@
   min-height: 23rem;
   transition: all 0.5s cubic-bezier(0.56, 0, 0.07, 1.01);
   position: relative;
+  max-height: 23rem;
 }
 .thankserai_img .balloon_img {
   position: absolute;
